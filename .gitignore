@@ -147,3 +147,7 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# comment-mimamori-live-for-youtube-docs gitignore settings
+.DS_Store
+*.zip
