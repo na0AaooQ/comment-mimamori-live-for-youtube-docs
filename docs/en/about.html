@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A moment to pause before reading YouTube comments. Learn about the purpose, features, and current scope of this extension.">
+    <title>About | こめんとみまもり Live</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="alternate" hreflang="ja" href="../about.html">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="brand-row">
+        <a class="brand" href="about.html" lang="ja">[開発中] こめんとみまもり <span class="brand-live" lang="en">Live</span></a>
+        <nav class="language-nav" aria-label="Page language"><a href="../about.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      </div>
+      <p class="tagline">A moment to pause before reading YouTube comments.</p>
+      <nav class="page-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="manual.html">User Guide</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="document" tabindex="-1">
+      <header class="page-intro">
+        <p class="eyebrow">USER DOCUMENTATION</p>
+        <h1>About</h1>
+        <p class="lead">A moment to pause before reading YouTube comments.<br>
+          Learn about the purpose, features, and current scope of this extension.</p>
+        <dl class="page-meta">
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-06">November 6, 2026</time></dd></div>
+          <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
+        </dl>
+        <aside class="notice" aria-label="Sample page · In development">
+          <p><strong>Sample page · In development</strong></p>
+          <p>This extension is a prototype and is not published in the Chrome Web Store.<br>
+            Features and instructions may change.</p>
+        </aside>
+      </header>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+            <li><a href="#overview">What is こめんとみまもり Live?</a></li>
+            <li><a href="#features">Main features</a></li>
+            <li><a href="#scope">Current scope</a></li>
+            <li><a href="#limitations">Limitations and notes</a></li>
+        </ol>
+      </nav>
+
+      <section aria-labelledby="overview">
+        <h2 id="overview">What is こめんとみまもり Live?</h2>
+        <p>こめんとみまもり Live is a Google Chrome extension that adds a pause before you read YouTube comments containing wording that may be distressing.</p>
+        <p>You choose whether to view a comment.<br>
+          The extension is not intended to judge a commenter’s character, censor opinions, or penalize anyone.</p>
+      </section>
+
+      <section aria-labelledby="features">
+        <h2 id="features">Main features</h2>
+        <p>The following features are currently implemented primarily for regular messages in YouTube Live Chat.</p>
+        <ul>
+          <li><strong>Standard Pause:</strong> places a pause over comments that match the 13 built-in standard terms.</li>
+          <li><strong>Words I’d Rather Avoid:</strong> lets you save words or phrases, turn matching for all saved words ON/OFF with the Master switch, and turn each word ON/OFF individually.</li>
+          <li><strong>View Comment (Manual Reveal):</strong> lets you choose to view the individual comment behind a pause.</li>
+          <li><strong>Export, Import, and Reset:</strong> backs up saved words and their ON/OFF settings, restores them by replacing the whole set, or resets them to their defaults.</li>
+          <li><strong>Japanese and English:</strong> supports the Popup, Options, and Live Chat pause interface.<br>
+            This does not translate comments or your saved words.</li>
+        </ul>
+        <p class="note">Turning Master OFF stops matching for your saved words.<br>
+          Standard rules remain active independently of the Master and individual word switches.</p>
+        <p>See the <a href="manual.html" target="_blank" rel="noopener noreferrer" aria-label="User Guide (opens in a new tab)">User Guide</a> for basic steps and the <a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy (opens in a new tab)">Privacy Policy</a> for information about data handling.</p>
+      </section>
+
+      <section aria-labelledby="scope">
+        <h2 id="scope">Current scope</h2>
+        <h3>YouTube Live Chat</h3>
+        <p>The main focus is regular Live Chat messages in viewing pages, YouTube Studio, and pop-out windows.<br>
+          These support combined matching with the 13 standard terms and your saved words, plus a Japanese or English pause interface.</p>
+        <h3>Video comments and Studio’s video comments page</h3>
+        <p>Top-level comments have a technical proof of concept (PoC) for hiding comment text before checking it, called Protect-first.<br>
+          <strong>They do not support Live Chat’s combined matching with the 13 standard terms and saved words, or its display language switching.</strong><br>
+          They cannot be used as an equivalent to the Live Chat protection features.</p>
+        <h3>Outside the scope or not yet verified</h3>
+        <p>Replies, Super Chat, Super Stickers, membership notifications, and other message types are outside the scope or unverified.<br>
+          Protection has not been verified for every display path, including changes to how messages are displayed during high-volume chats.</p>
+      </section>
+
+      <section aria-labelledby="limitations">
+        <h2 id="limitations">Limitations and notes</h2>
+        <ul>
+          <li>This is a prototype in development.<br>
+            It is not published in the Chrome Web Store.</li>
+          <li>Rule-based matching can produce false positives and miss comments.</li>
+          <li>Changes to YouTube’s page structure may prevent the extension from working correctly.</li>
+          <li>It does not guarantee complete safety or protection for every comment and display path.</li>
+        </ul>
+        <p>When changing saved-word settings, follow the <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="steps for closing all Live Chats before making changes (opens in a new tab)">steps for closing all Live Chats before making changes</a>.</p>
+      </section>
+
+      <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
+      <nav class="page-nav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="manual.html">User Guide</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      <nav class="language-nav" aria-label="Footer page language"><a href="../about.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      <p class="footer-note">Sample documentation for a prototype in development.</p>
+    </footer>
+  </body>
+</html>

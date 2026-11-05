@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn the basic steps for opening settings, managing saved words, viewing paused comments, and keeping backups.">
+    <title>User Guide | こめんとみまもり Live</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="alternate" hreflang="ja" href="../manual.html">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="brand-row">
+        <a class="brand" href="about.html" lang="ja">[開発中] こめんとみまもり <span class="brand-live" lang="en">Live</span></a>
+        <nav class="language-nav" aria-label="Page language"><a href="../manual.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      </div>
+      <p class="tagline">A moment to pause before reading YouTube comments.</p>
+      <nav class="page-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manual.html" aria-current="page">User Guide</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="document" tabindex="-1">
+      <header class="page-intro">
+        <p class="eyebrow">USER DOCUMENTATION</p>
+        <h1>User Guide</h1>
+        <p class="lead">Learn the basic steps for opening settings, managing saved words, viewing paused comments, and keeping backups.</p>
+        <dl class="page-meta">
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-06">November 6, 2026</time></dd></div>
+          <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
+        </dl>
+        <aside class="notice" aria-label="Sample page · In development">
+          <p><strong>Sample page · In development</strong></p>
+          <p>This extension is a prototype and is not published in the Chrome Web Store.<br>
+            Features and instructions may change.</p>
+        </aside>
+      </header>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+            <li><a href="#getting-started">Before you begin</a></li>
+            <li><a href="#popup">Open the Popup</a></li>
+            <li><a href="#options">Options and display language</a></li>
+            <li><a href="#saved-words">Manage Words I’d Rather Avoid</a></li>
+            <li><a href="#live-chat">Use the pause in Live Chat</a></li>
+            <li><a href="#apply-settings">Apply saved-word settings (D-1)</a></li>
+            <li><a href="#export">Export: save a backup</a></li>
+            <li><a href="#import">Import: restore a backup</a></li>
+            <li><a href="#reset">Reset: clear saved-word settings</a></li>
+            <li><a href="#troubleshooting">Limitations and troubleshooting</a></li>
+        </ol>
+      </nav>
+
+      <section aria-labelledby="getting-started">
+        <h2 id="getting-started">Before you begin</h2>
+        <p>This sample guide covers prototype v0.1.0, which is still in development and is not published in the Chrome Web Store.<br>
+          It is intended for people who have already loaded the extension for development testing.</p>
+        <p>The main focus is regular Live Chat messages.<br>
+          Video comments and Studio’s video comments page are technical proofs of concept; they do not have the same matching or bilingual interface as Live Chat.<br>
+          See the <a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="current scope (opens in a new tab)">current scope</a>.</p>
+      </section>
+
+      <section aria-labelledby="popup">
+        <h2 id="popup">Open the Popup</h2>
+        <ol>
+          <li>Select こめんとみまもり Live in Chrome’s Extensions menu, or select its icon if you have pinned it to the toolbar.</li>
+          <li>Select <strong>“Open Settings”</strong> to open the Options page in a new tab.</li>
+        </ol>
+        <p>The Popup shows the product name and version.<br>
+          Use Options to change saved words and the display language.</p>
+      </section>
+
+      <section aria-labelledby="options">
+        <h2 id="options">Options and display language</h2>
+        <p>Options contains the display language preference, saved-word management, an explanation of Standard Pause, backups, and reset controls.<br>
+          Saved-word actions are saved automatically; check the result shown on the page.</p>
+        <h3>Automatic / 日本語 / English</h3>
+        <ul>
+          <li><strong>Automatic:</strong> uses Japanese if Chrome’s UI language is Japanese, and English otherwise.</li>
+          <li><strong>日本語 / English:</strong> uses the selected language for Options, the Popup, and the Live Chat pause interface.</li>
+        </ul>
+        <p>Your language preference is saved automatically.<br>
+          If you are entering or editing a word, a confirmation appears before switching.<br>
+          Unsaved input is cleared after the language change is successfully saved, so save any edits you need first.</p>
+        <p>The Popup uses the new language the next time it opens.<br>
+          Live Chat uses it when newly opened or reloaded.<br>
+          <strong>A language-only change does not require closing all Live Chats.</strong><br>
+          Chats that are already open do not receive language changes in real time.</p>
+        <p>Switching this website’s language does not change the extension’s language preference.<br>
+          Language switching for video comments and Studio’s video comment interface is not yet supported.</p>
+      </section>
+
+      <section aria-labelledby="saved-words">
+        <h2 id="saved-words">Manage Words I’d Rather Avoid</h2>
+        <p>Before making changes, close all Live Chats using the <a href="#apply-settings">saved-word settings procedure (D-1)</a>.</p>
+        <ol>
+          <li><strong>Add:</strong> enter a word or phrase of 2–50 characters under “Add a Word or Phrase,” then select “Add.”<br>
+            You can save up to 30 entries.</li>
+          <li><strong>Edit:</strong> select “Edit” beside a saved word, make your changes, then select “Save.”<br>
+            Select “Cancel” to discard the edit.</li>
+          <li><strong>Delete:</strong> select “Delete” for the entry and confirm.</li>
+          <li><strong>Master ON/OFF:</strong> use “Pause for Saved Words” to turn matching for all saved words ON or OFF.</li>
+          <li><strong>Individual ON/OFF:</strong> use the switch for each word to include or exclude it from matching.</li>
+        </ol>
+        <p>Duplicate entries, line breaks, and some special characters are not accepted.<br>
+          Follow the input guidance if a message appears.</p>
+        <p class="note"><strong>Standard rules operate independently.</strong><br>
+          The 13 standard terms remain active even if Master or an individual word is OFF.<br>
+          Master is not an ON/OFF switch for the entire extension.</p>
+      </section>
+
+      <section aria-labelledby="live-chat">
+        <h2 id="live-chat">Use the pause in Live Chat</h2>
+        <p>A pause is placed over a matching comment before you read its text.<br>
+          If you want to read it, select <strong>“View Comment”</strong> for that comment.<br>
+          In Japanese, the button is labeled “内容を見る”.</p>
+        <p>This action, called Manual Reveal, displays only that individual comment.<br>
+          It does not reveal all comments.<br>
+          Permission to display it may be cleared if its text or other relevant state changes.</p>
+        <p>The extension does not automatically delete comments, judge commenters, or penalize anyone.<br>
+          A comment may remain hidden if it cannot be checked.<br>
+          Protection is not guaranteed for every comment or display path.</p>
+      </section>
+
+      <section aria-labelledby="apply-settings">
+        <h2 id="apply-settings">Apply saved-word settings (D-1)</h2>
+        <p>Use this sequence when adding, editing, or deleting words, changing Master or individual ON/OFF settings, importing, or resetting.</p>
+        <ol class="steps">
+          <li><strong>Close all Live Chats.</strong><br>
+            Include chats embedded in viewing pages, chats in Studio, and pop-out windows.</li>
+          <li><strong>Change saved-word settings in Options.</strong><br>
+            Import or Reset also belongs at this step.</li>
+          <li><strong>Confirm that saving is complete.</strong><br>
+            If the result cannot be confirmed, reload Options to check the saved state.</li>
+          <li><strong>Open Live Chat again.</strong><br>
+            Newly opened chats use the saved settings.</li>
+        </ol>
+        <p class="note">Live updates of saved-word settings to chats that are already open have not been implemented.<br>
+          Close all chats before changing the settings, then reopen them after saving.</p>
+        <p>For a language-only change, you do not need to close every chat.<br>
+          Newly opened or reloaded chats use the new display language.</p>
+      </section>
+
+      <section aria-labelledby="export">
+        <h2 id="export">Export: save a backup</h2>
+        <ol>
+          <li>Clear the input field, and save or cancel any word you are editing.<br>
+            Export is unavailable while entering or editing a word.</li>
+          <li>Select <strong>“Export”</strong> under “Backup” and save the JSON file locally.</li>
+        </ol>
+        <p>The file contains your saved words, including words set to OFF, and the Master and individual ON/OFF settings.<br>
+          It does not include unsaved input, your display language preference, or the 13 standard terms.</p>
+        <p class="note">The JSON file contains your saved words in plain text, exactly as stored.<br>
+          Take care when choosing where to save it and whom to share it with.</p>
+      </section>
+
+      <section aria-labelledby="import">
+        <h2 id="import">Import: restore a backup</h2>
+        <ol>
+          <li>Close all Live Chats using the <a href="#apply-settings">D-1 procedure</a>.<br>
+            Export your current settings first if you want to keep a copy.</li>
+          <li>Clear the input field and save or cancel any active edit.<br>
+            Select <strong>“Import”</strong> under “Backup,” then choose a JSON file exported by this extension.</li>
+          <li>Review the entry counts and ON/OFF information shown.<br>
+            If correct, select <strong>“Import and Replace”</strong>.<br>
+            Select “Cancel” to stop.</li>
+          <li>Confirm that saving is complete, then open Live Chat again.</li>
+        </ol>
+        <p><strong>Import replaces the whole set.</strong><br>
+          It replaces your saved words and Master and individual ON/OFF settings with the file’s contents; it does not add to your existing entries.<br>
+          It does not change the display language or standard rules.</p>
+      </section>
+
+      <section aria-labelledby="reset">
+        <h2 id="reset">Reset: clear saved-word settings</h2>
+        <ol>
+          <li>Export a backup first if needed, then close all Live Chats using the <a href="#apply-settings">D-1 procedure</a>.</li>
+          <li>Select <strong>“Reset”</strong> under “Reset Settings” and read the confirmation.</li>
+          <li>Select <strong>“Confirm Reset”</strong> to continue, or “Cancel” to stop.</li>
+          <li>Confirm that the reset is complete, then open Live Chat again.</li>
+        </ol>
+        <p>Reset deletes all saved words and their individual ON/OFF settings, returning to <strong>Master ON with 0 saved words</strong>.<br>
+          It does not change the display language preference or the 13 standard matching rules.</p>
+      </section>
+
+      <section aria-labelledby="troubleshooting">
+        <h2 id="troubleshooting">Limitations and troubleshooting</h2>
+        <ul>
+          <li>After changing saved-word settings, check that you closed all Live Chats before the change and confirmed saving.<br>
+            Then open a new chat.</li>
+          <li>Reload Options to check your saved words, Master switch, and individual ON/OFF settings.</li>
+          <li>Check the <a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="current scope (opens in a new tab)">current scope</a>.<br>
+            Replies, Super Chat, and other message types are outside the scope or unverified.</li>
+          <li>Changes to YouTube’s pages may affect the extension.<br>
+            Some areas are not yet implemented or verified.</li>
+        </ul>
+        <p>The absence of a pause does not mean a comment is safe.<br>
+          If you are unsure about the extension’s behavior, you can choose to step away from the comments.</p>
+      </section>
+
+      <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
+      <nav class="page-nav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manual.html" aria-current="page">User Guide</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      <nav class="language-nav" aria-label="Footer page language"><a href="../manual.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      <p class="footer-note">Sample documentation for a prototype in development.</p>
+    </footer>
+  </body>
+</html>

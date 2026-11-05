@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How the current prototype handles comment text, matching results, and your settings.">
+    <title>Privacy Policy | こめんとみまもり Live</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="alternate" hreflang="ja" href="../privacy.html">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="brand-row">
+        <a class="brand" href="about.html" lang="ja">[開発中] こめんとみまもり <span class="brand-live" lang="en">Live</span></a>
+        <nav class="language-nav" aria-label="Page language"><a href="../privacy.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      </div>
+      <p class="tagline">A moment to pause before reading YouTube comments.</p>
+      <nav class="page-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manual.html">User Guide</a></li>
+            <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="document" tabindex="-1">
+      <header class="page-intro">
+        <p class="eyebrow">USER DOCUMENTATION</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">How the current prototype handles comment text, matching results, and your settings.</p>
+        <dl class="page-meta">
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-06">November 6, 2026</time></dd></div>
+          <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
+        </dl>
+        <aside class="notice" aria-label="Sample page · In development">
+          <p><strong>Sample page · In development</strong></p>
+          <p>This extension is a prototype and is not published in the Chrome Web Store.<br>
+            Features and instructions may change.</p>
+        </aside>
+      </header>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+            <li><a href="#policy">Our approach</a></li>
+            <li><a href="#comments">Comment text and matching results</a></li>
+            <li><a href="#settings">Settings stored locally</a></li>
+            <li><a href="#backup">Export, Import, and JSON files</a></li>
+            <li><a href="#no-action">What the current extension does not do</a></li>
+            <li><a href="#hosting">This website and GitHub Pages</a></li>
+            <li><a href="#updates">Future updates</a></li>
+            <li><a href="#contact">Developer and contact information</a></li>
+        </ol>
+      </nav>
+
+      <section aria-labelledby="policy">
+        <h2 id="policy">Our approach</h2>
+        <p>The extension is designed to respect your privacy by handling comment text and matching results within your browser.<br>
+          This is a provisional privacy explanation for prototype v0.1.0, based on its current implementation.</p>
+        <p>We distinguish between comment processing by the extension, saved settings, backup files you save, and hosting of this website.</p>
+      </section>
+
+      <section aria-labelledby="comments">
+        <h2 id="comments">Comment text and matching results</h2>
+        <p>The current extension processes supported comments and matching results in browser memory.</p>
+        <ul>
+          <li>It does not send comment text to an external server for checking.</li>
+          <li>It does not persistently store comment text.</li>
+          <li>It does not transmit or persistently store matching results.</li>
+          <li>It does not use external AI to check comments.</li>
+        </ul>
+        <p>This describes processing by this extension.<br>
+          YouTube’s own storage and transmission of comments are handled under YouTube’s service policies.</p>
+      </section>
+
+      <section aria-labelledby="settings">
+        <h2 id="settings">Settings stored locally</h2>
+        <p>The following settings are saved in <code>chrome.storage.local</code>, Chrome’s local extension storage:</p>
+        <ul>
+          <li>Your saved “Words I’d Rather Avoid”</li>
+          <li>The Master ON/OFF setting for all saved words</li>
+          <li>Individual ON/OFF settings for each word</li>
+          <li>The display language preference: Automatic, Japanese, or English</li>
+        </ul>
+        <p>Saved words are stored as settings.<br>
+          Comment text and matching results are not saved as settings.<br>
+          Settings use Chrome’s local storage area, not its cloud sync storage area.</p>
+        <p>You can delete saved words individually in Options or use <a href="manual.html#reset">Reset</a>.<br>
+          Reset does not change your display language preference.</p>
+      </section>
+
+      <section aria-labelledby="backup">
+        <h2 id="backup">Export, Import, and JSON files</h2>
+        <p>You can export saved words, including words set to OFF, and their Master and individual ON/OFF settings to a local JSON file.<br>
+          Unsaved input, your display language preference, and the 13 standard terms are excluded.</p>
+        <p><strong>Exported files contain your saved words in plain text.</strong><br>
+          Check where you save them and whom you share them with.<br>
+          The extension has no feature that uploads these files to an external server.</p>
+        <p>After you review a selected JSON file, Import <strong>replaces all current saved-word settings</strong>.<br>
+          It does not append to your existing words or change your display language preference.</p>
+        <p>See <a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="Export (opens in a new tab)">Export</a> and <a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="Import (opens in a new tab)">Import</a> for instructions, and follow the <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="D-1 procedure (opens in a new tab)">D-1 procedure</a> to apply setting changes.</p>
+      </section>
+
+      <section aria-labelledby="no-action">
+        <h2 id="no-action">What the current extension does not do</h2>
+        <ul>
+          <li>Judge a commenter’s character or penalize commenters</li>
+          <li>Automatically delete comments</li>
+          <li>Use external AI to check comments</li>
+          <li>Collect usage information through external analytics or telemetry</li>
+        </ul>
+        <p>The pause lets you choose whether to view a comment.<br>
+          These statements describe the current implementation; the explanation will be reviewed if features change.</p>
+      </section>
+
+      <section aria-labelledby="hosting">
+        <h2 id="hosting">This website and GitHub Pages</h2>
+        <p>GitHub Pages is the hosting destination for this website.<br>
+          Hosting-related processing when you visit a web page is separate from comment matching by the extension.</p>
+        <p>When you visit a page on GitHub Pages, GitHub logs and stores your IP address for security purposes, whether or not you are signed in.<br>
+          See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub’s documentation on data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+        <p>These web pages do not include external analytics, telemetry, external CDNs, or external JavaScript.<br>
+          If you follow a link to an external website, that website’s data practices apply.</p>
+      </section>
+
+      <section aria-labelledby="updates">
+        <h2 id="updates">Future updates</h2>
+        <p>This is a prototype in development.<br>
+          This explanation may be updated as features change.</p>
+        <p>Before a formal release or Chrome Web Store submission, we plan to review the implementation, stored information, external communications, and user documentation again.<br>
+          This provisional page does not guarantee the legal completeness of a final privacy policy.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Developer and contact information</h2>
+        <h3>Developer information</h3>
+        <p>Public developer information is available on <a href="https://github.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="GitHub: @na0AaooQ (opens in a new tab)">GitHub: @na0AaooQ</a>.</p>
+        <ul>
+          <li>Business name: Kokoro Mimamori</li>
+          <li>Representative: Naohisa Aoki</li>
+          <li>Role: Freelance engineer</li>
+          <li>Business: Planning, development, and operation of web services and software</li>
+          <li>Business address: Nishishinjuku Mizuma Building 2F, 3-3-13 Nishishinjuku, Shinjuku-ku, Tokyo 160-0023, Japan</li>
+          <li>Qiita: <a href="https://qiita.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://qiita.com/na0AaooQ (opens in a new tab)">https://qiita.com/na0AaooQ</a></li>
+          <li>GitHub: <a href="https://github.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://github.com/na0AaooQ (opens in a new tab)">https://github.com/na0AaooQ</a></li>
+          <li>X: <a href="https://x.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://x.com/na0AaooQ (opens in a new tab)">https://x.com/na0AaooQ</a></li>
+          <li>Portfolio: <a href="https://portfolio.na0aaooq.com/" target="_blank" rel="noopener noreferrer" aria-label="https://portfolio.na0aaooq.com/ (opens in a new tab)">https://portfolio.na0aaooq.com/</a></li>
+        </ul>
+        <h3>Contact</h3>
+        <p>For contact information, visit the developer’s public <a href="https://portfolio.na0aaooq.com/contact.html" target="_blank" rel="noopener noreferrer" aria-label="portfolio contact page (external website) (opens in a new tab)">portfolio contact page (external website)</a>.<br>
+          Please also review that site’s privacy policy.</p>
+      </section>
+
+      <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
+      <nav class="page-nav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manual.html">User Guide</a></li>
+            <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      <nav class="language-nav" aria-label="Footer page language"><a href="../privacy.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
+      <p class="footer-note">Sample documentation for a prototype in development.</p>
+    </footer>
+  </body>
+</html>
