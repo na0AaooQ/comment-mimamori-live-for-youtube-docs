@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。">
+    <title>プライバシーポリシー | こめんとみまもり Live</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="en" href="en/privacy.html">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+    <header class="site-header">
+      <div class="brand-row">
+        <a class="brand" href="about.html" lang="ja">[開発中] こめんとみまもり <span class="brand-live" lang="en">Live</span></a>
+        <nav class="language-nav" aria-label="表示言語"><span lang="ja" aria-current="true">日本語</span><span aria-hidden="true">/</span><a href="en/privacy.html" lang="en" hreflang="en">English</a></nav>
+      </div>
+      <p class="tagline">YouTubeコメントに、心のワンクッション。</p>
+      <nav class="page-nav" aria-label="メインナビゲーション">
+          <ul>
+            <li><a href="about.html">サービス説明</a></li>
+            <li><a href="manual.html">操作マニュアル</a></li>
+            <li><a href="privacy.html" aria-current="page">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="document" tabindex="-1">
+      <header class="page-intro">
+        <p class="eyebrow">利用者向けガイド</p>
+        <h1>プライバシーポリシー</h1>
+        <p class="lead">現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。</p>
+        <dl class="page-meta">
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-06">2026年11月6日</time></dd></div>
+          <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
+        </dl>
+        <aside class="notice" aria-label="開発中のサンプルページ">
+          <p><strong>開発中のサンプルページ</strong></p>
+          <p>この拡張機能はプロトタイプです。<br>
+            Chrome Web Storeには未公開です。<br>
+            内容や操作は今後変更する場合があります。</p>
+        </aside>
+      </header>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">目次</h2>
+        <ol>
+            <li><a href="#policy">基本方針</a></li>
+            <li><a href="#comments">コメント本文・判定結果</a></li>
+            <li><a href="#settings">保存する設定情報</a></li>
+            <li><a href="#backup">Export・ImportとJSONファイル</a></li>
+            <li><a href="#no-action">現在の拡張機能で行わないこと</a></li>
+            <li><a href="#hosting">WebサイトとGitHub Pages</a></li>
+            <li><a href="#updates">今後の更新</a></li>
+            <li><a href="#contact">開発者情報・お問い合わせ</a></li>
+        </ol>
+      </nav>
+
+      <section aria-labelledby="policy">
+        <h2 id="policy">基本方針</h2>
+        <p>利用者のプライバシーを尊重し、コメント本文と判定結果をブラウザ内で取り扱う設計です。<br>
+          このページは、v0.1.0の現行実装に基づく、開発中のプロトタイプ用の暫定的なプライバシー説明です。</p>
+        <p>拡張機能によるコメント処理、設定の保存、利用者が保存するバックアップ、Webサイトのホスティングを区別して説明します。</p>
+      </section>
+
+      <section aria-labelledby="comments">
+        <h2 id="comments">コメント本文・判定結果</h2>
+        <p>現在の拡張機能は、対象コメントの本文と判定結果をブラウザ内のメモリ上で処理します。</p>
+        <ul>
+          <li>コメント本文を判定用の外部サーバーへ送信しません。</li>
+          <li>コメント本文を拡張機能が永続保存することはありません。</li>
+          <li>判定結果を外部送信・永続保存しません。</li>
+          <li>外部AIによるコメント判定は行いません。</li>
+        </ul>
+        <p>これは本拡張機能による処理の説明です。<br>
+          YouTube自体によるコメントの保存・通信などは、YouTube側のサービスの取り扱いに従います。</p>
+      </section>
+
+      <section aria-labelledby="settings">
+        <h2 id="settings">保存する設定情報</h2>
+        <p>次の設定を、Chrome拡張機能のローカル保存領域 <code>chrome.storage.local</code> に保存します。</p>
+        <ul>
+          <li>利用者が登録した「距離を置きたい言葉」</li>
+          <li>登録語句全体のMaster ON/OFF</li>
+          <li>各登録語句の個別ON/OFF</li>
+          <li>表示言語設定（自動／日本語／English）</li>
+        </ul>
+        <p>登録語句は設定として保存しますが、コメント本文や判定結果を設定として保存するものではありません。<br>
+          設定の保存先はChromeのローカル領域で、クラウド同期用の保存領域は使用しません。</p>
+        <p>登録語句を削除する場合はOptionsで個別に削除するか、<a href="manual.html#reset">Reset</a>を利用できます。<br>
+          Resetで表示言語設定は変更されません。</p>
+      </section>
+
+      <section aria-labelledby="backup">
+        <h2 id="backup">Export・ImportとJSONファイル</h2>
+        <p>保存済みの登録語句とMaster・個別ON/OFF設定を、ローカルのJSONファイルへExportできます。<br>
+          OFFの語句も含みます。<br>
+          未保存の入力内容、表示言語設定、標準13語句はExport対象外です。</p>
+        <p><strong>Exportファイルには登録語句が平文で含まれます。</strong><br>
+          ファイルの保存場所や共有相手は、ご自身で確認してください。<br>
+          拡張機能がこのファイルを外部サーバーへアップロードする機能はありません。</p>
+        <p>Importは、選択したJSONを確認後、現在の登録語句設定を<strong>全体置き換え</strong>します。<br>
+          既存の語句への追加ではありません。<br>
+          表示言語設定は変更しません。</p>
+        <p>操作方法は<a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="Export（別タブで開きます）">Export</a>・<a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="Import（別タブで開きます）">Import</a>、設定の反映は<a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="D-1の手順（別タブで開きます）">D-1の手順</a>をご覧ください。</p>
+      </section>
+
+      <section aria-labelledby="no-action">
+        <h2 id="no-action">現在の拡張機能で行わないこと</h2>
+        <ul>
+          <li>投稿者の人格評価や、投稿者への制裁</li>
+          <li>コメントの自動削除</li>
+          <li>外部AIによるコメント判定</li>
+          <li>外部アクセス解析・テレメトリによる利用状況の収集</li>
+        </ul>
+        <p>ワンクッションは、利用者本人がコメントの内容を見るかどうかを選ぶためのものです。<br>
+          これらは現行実装についての説明で、将来の機能変更時には説明を見直します。</p>
+      </section>
+
+      <section aria-labelledby="hosting">
+        <h2 id="hosting">WebサイトとGitHub Pages</h2>
+        <p>このWebサイトの公開先はGitHub Pagesです。<br>
+          Webページの閲覧に伴うホスティング側の処理は、拡張機能のコメント判定とは別のものです。</p>
+        <p>GitHub Pages上でページを閲覧すると、GitHubへのサインインの有無にかかわらず、セキュリティ目的で閲覧者のIPアドレスが記録・保存されます。<br>
+          詳しくは<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub公式のデータ収集に関する説明</a>と<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシー声明</a>をご確認ください。</p>
+        <p>このWebページ自体には、外部アクセス解析、テレメトリ、外部CDN、外部JavaScriptを追加していません。<br>
+          外部サイトのリンクを開いた場合は、移動先のサイトでの取り扱いが適用されます。</p>
+      </section>
+
+      <section aria-labelledby="updates">
+        <h2 id="updates">今後の更新</h2>
+        <p>現在は開発中のプロトタイプです。<br>
+          機能の変更に応じて、この説明も更新する可能性があります。</p>
+        <p>正式公開前・Chrome Web Store申請前に、実装内容、保存する情報、外部通信の有無、利用者向け説明を改めて確認する予定です。<br>
+          この暫定ページが、正式なプライバシーポリシーとしての法的な完全性を保証するものではありません。</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">開発者情報・お問い合わせ</h2>
+        <h3>開発者情報</h3>
+        <p>開発者の公開情報は<a href="https://github.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="GitHub：@na0AaooQ（別タブで開きます）">GitHub：@na0AaooQ</a>で確認できます。</p>
+        <ul>
+          <li>個人事業主の屋号: こころみまもり</li>
+          <li>代表者: 青木 直之（あおき なおひさ）</li>
+          <li>職種: フリーランスエンジニア</li>
+          <li>事業内容: Webサービスの企画・開発・運営、ソフトウェア開発業</li>
+          <li>事業所住所: 〒160-0023<br>東京都新宿区西新宿3丁目3番13号西新宿水間ビル2F</li>
+          <li>Qiita: <a href="https://qiita.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://qiita.com/na0AaooQ（別タブで開きます）">https://qiita.com/na0AaooQ</a></li>
+          <li>GitHub: <a href="https://github.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://github.com/na0AaooQ（別タブで開きます）">https://github.com/na0AaooQ</a></li>
+          <li>X（旧Twitter）: <a href="https://x.com/na0AaooQ" target="_blank" rel="noopener noreferrer" aria-label="https://x.com/na0AaooQ（別タブで開きます）">https://x.com/na0AaooQ</a></li>
+          <li>ポートフォリオサイト: <a href="https://portfolio.na0aaooq.com/" target="_blank" rel="noopener noreferrer" aria-label="https://portfolio.na0aaooq.com/（別タブで開きます）">https://portfolio.na0aaooq.com/</a></li>
+        </ul>
+        <h3>お問い合わせ</h3>
+        <p>お問い合わせ先は、開発者が公開している<a href="https://portfolio.na0aaooq.com/contact.html" target="_blank" rel="noopener noreferrer" aria-label="ポートフォリオサイトのお問い合わせページ（外部サイト）（別タブで開きます）">ポートフォリオサイトのお問い合わせページ（外部サイト）</a>をご確認ください。<br>
+          移動先のプライバシーポリシーもご確認ください。</p>
+      </section>
+
+      <p class="back-to-top"><a href="#main-content">ページ上部へ戻る ↑</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
+      <nav class="page-nav" aria-label="フッターナビゲーション">
+          <ul>
+            <li><a href="about.html">サービス説明</a></li>
+            <li><a href="manual.html">操作マニュアル</a></li>
+            <li><a href="privacy.html" aria-current="page">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      <nav class="language-nav" aria-label="フッターの表示言語"><span lang="ja" aria-current="true">日本語</span><span aria-hidden="true">/</span><a href="en/privacy.html" lang="en" hreflang="en">English</a></nav>
+      <p class="footer-note">開発中のプロトタイプに関するサンプル資料です。</p>
+    </footer>
+  </body>
+</html>
