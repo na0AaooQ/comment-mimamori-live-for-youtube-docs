@@ -32,7 +32,7 @@
         <p class="lead">A moment to pause before reading YouTube comments.<br>
           Learn about the purpose, features, and current scope of this extension.</p>
         <dl class="page-meta">
-          <div><dt>Last updated</dt><dd><time datetime="2026-11-06">November 6, 2026</time></dd></div>
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-20">November 20, 2026</time></dd></div>
           <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="Sample page · In development">
@@ -61,13 +61,19 @@
 
       <section aria-labelledby="features">
         <h2 id="features">Main features</h2>
-        <p>The following features are currently implemented primarily for regular messages in YouTube Live Chat.</p>
+        <p>The extension adds a pause for supported YouTube live stream comments (Live Chat), regular video comments, and video comments in YouTube Studio.<br>
+          The standard rules currently check for 13 strong expressions that may be distressing.<br>
+          The same rules check for enabled words or phrases you’ve saved.<br>
+          A pause appears when a comment matches a standard term or an enabled saved term.<br>
+          Protect-first means hiding comment text before checking it.<br>
+          Within supported page layouts, the extension leaves text hidden while it checks a comment or if the check fails.</p>
         <ul>
-          <li><strong>Standard Pause:</strong> places a pause over comments that match the 13 built-in standard terms.</li>
+          <li><strong>Comment display:</strong> shows comments marked SAFE automatically.<br>
+            For comments marked CUSHION, the text stays hidden behind a pause.</li>
           <li><strong>Words I’d Rather Avoid:</strong> lets you save words or phrases, turn matching for all saved words ON/OFF with the Master switch, and turn each word ON/OFF individually.</li>
           <li><strong>View Comment (Manual Reveal):</strong> lets you choose to view the individual comment behind a pause.</li>
           <li><strong>Export, Import, and Reset:</strong> backs up saved words and their ON/OFF settings, restores them by replacing the whole set, or resets them to their defaults.</li>
-          <li><strong>Japanese and English:</strong> supports the Popup, Options, and Live Chat pause interface.<br>
+          <li><strong>Japanese and English:</strong> supports the Popup, Options, and the extension’s interface in Live Chat, regular video comments, and Studio’s video comments pages.<br>
             This does not translate comments or your saved words.</li>
         </ul>
         <p class="note">Turning Master OFF stops matching for your saved words.<br>
@@ -78,15 +84,16 @@
       <section aria-labelledby="scope">
         <h2 id="scope">Current scope</h2>
         <h3>YouTube Live Chat</h3>
-        <p>The main focus is regular Live Chat messages in viewing pages, YouTube Studio, and pop-out windows.<br>
-          These support combined matching with the 13 standard terms and your saved words, plus a Japanese or English pause interface.</p>
-        <h3>Video comments and Studio’s video comments page</h3>
-        <p>Top-level comments have a technical proof of concept (PoC) for hiding comment text before checking it, called Protect-first.<br>
-          <strong>They do not support Live Chat’s combined matching with the 13 standard terms and saved words, or its display language switching.</strong><br>
-          They cannot be used as an equivalent to the Live Chat protection features.</p>
+        <p>Regular Live Chat messages on viewing pages, in YouTube Studio, and in pop-out windows are supported.</p>
+        <h3>Regular video comments</h3>
+        <p>Supported top-level comments (excluding replies) on regular video pages (<code>/watch</code> and <code>/live</code>) are covered.<br>
+          When you switch videos through supported in-page navigation, the extension tries to check the current video’s comments and resume automatically.</p>
+        <h3>Video comments in YouTube Studio</h3>
+        <p>Top-level comments on an individual video’s comments page in Studio are supported.<br>
+          When you switch to another video within Studio, the extension may keep supported comments hidden and ask you to reload the page.</p>
         <h3>Outside the scope or not yet verified</h3>
-        <p>Replies, Super Chat, Super Stickers, membership notifications, and other message types are outside the scope or unverified.<br>
-          Protection has not been verified for every display path, including changes to how messages are displayed during high-volume chats.</p>
+        <p>Replies, Studio’s channel-wide comment management page, Super Chat, Super Stickers, membership notifications, and Shorts are outside the scope.<br>
+          Protection has yet to be verified for every way comments appear, including unfamiliar page layouts and changes in how large numbers of comments are displayed.</p>
       </section>
 
       <section aria-labelledby="limitations">
@@ -98,7 +105,9 @@
           <li>Changes to YouTube’s page structure may prevent the extension from working correctly.</li>
           <li>It does not guarantee complete safety or protection for every comment and display path.</li>
         </ul>
-        <p>When changing saved-word settings, follow the <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="steps for closing all Live Chats before making changes (opens in a new tab)">steps for closing all Live Chats before making changes</a>.</p>
+        <p>When you save changes to your word settings or display language, the extension tries to update open, supported comment sections.<br>
+          There is no guarantee that every screen will be notified, that updates will complete, or how long they will take.<br>
+          If changes do not appear, see <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="how to apply saved-word settings (opens in a new tab)">how to apply saved-word settings</a>.</p>
       </section>
 
       <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>

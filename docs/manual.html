@@ -31,13 +31,13 @@
         <h1>操作マニュアル</h1>
         <p class="lead">設定画面の開き方から、登録語句・ワンクッション・バックアップの基本操作までをご案内します。</p>
         <dl class="page-meta">
-          <div><dt>最終更新日</dt><dd><time datetime="2026-11-06">2026年11月6日</time></dd></div>
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-20">2026年11月20日</time></dd></div>
           <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="開発中のサンプルページ">
           <p><strong>開発中のサンプルページ</strong></p>
-          <p>この拡張機能はプロトタイプです。<br>
-            Chrome Web Storeには未公開です。<br>
+          <p>このGoogle Chrome 拡張機能はプロトタイプです。<br>
+            Chrome ウェブストアには未公開です。<br>
             内容や操作は今後変更する場合があります。</p>
         </aside>
       </header>
@@ -46,11 +46,13 @@
         <h2 id="toc-title">目次</h2>
         <ol>
             <li><a href="#getting-started">はじめに</a></li>
-            <li><a href="#popup">Popupを開く</a></li>
-            <li><a href="#options">Optionsと表示言語</a></li>
+            <li><a href="#popup">「こめんとみまもり Live」設定画面へのポップアップを開く</a></li>
+            <li><a href="#options">オプションと表示言語</a></li>
             <li><a href="#saved-words">距離を置きたい言葉を管理する</a></li>
             <li><a href="#live-chat">Live Chatのワンクッション</a></li>
-            <li><a href="#apply-settings">登録語句設定を反映する（D-1）</a></li>
+            <li><a href="#video-comments">通常動画コメントのワンクッション</a></li>
+            <li><a href="#studio-comments">Studioの動画コメント</a></li>
+            <li><a href="#apply-settings">登録語句設定を反映する</a></li>
             <li><a href="#export">Export：バックアップを保存する</a></li>
             <li><a href="#import">Import：バックアップから復元する</a></li>
             <li><a href="#reset">Reset：登録語句設定を初期化する</a></li>
@@ -61,45 +63,50 @@
       <section aria-labelledby="getting-started">
         <h2 id="getting-started">はじめに</h2>
         <p>このマニュアルは、開発中のプロトタイプ v0.1.0 を対象としたサンプルです。<br>
-          Chrome Web Storeには未公開です。<br>
-          開発確認用として、すでに拡張機能を読み込んでいる方に向けて説明します。</p>
-        <p>主な対象はLive Chatの通常コメントです。<br>
-          通常動画・Studio「動画のコメント」は技術検証段階で、Live Chatと同じ判定・日英表示には対応していません。<br>
+          Chrome ウェブストアには未公開です。<br>
+          開発確認用として、すでにGoogle Chrome 拡張機能を読み込んでいる方に向けて説明します。</p>
+        <p>YouTubeライブ配信のコメント（Live Chat）のうち、通常のメッセージが対象です。<br>
+          通常動画とYouTube Studio「動画のコメント」では、対応するトップレベルコメントが対象です。<br>
+          いずれも標準13語句と有効な登録語句を共通のルールで判定し、Google Chrome 拡張機能の表示は日本語・英語に対応しています。<br>
+          返信やSuper Chatなどは対象外で、未知の画面構造での動作は未確認です。<br>
           詳しくは<a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="現在の対象範囲（別タブで開きます）">現在の対象範囲</a>をご覧ください。</p>
       </section>
 
       <section aria-labelledby="popup">
-        <h2 id="popup">Popupを開く</h2>
+        <h2 id="popup">「こめんとみまもり Live」設定画面へのポップアップを開く</h2>
         <ol>
-          <li>Chromeの拡張機能メニュー、またはツールバーに固定した「こめんとみまもり Live」のアイコンを選び、Popupを開きます。</li>
-          <li><strong>「詳細設定を開く」</strong>を選ぶと、Options（設定画面）が新しいタブで開きます。</li>
+          <li>Chromeの「拡張機能」メニューから「こめんとみまもり Live」を選び、オプションポップアップを開きます。<br>
+            ツールバーに固定している場合は、そのアイコンからも開けます。</li>
+          <li><strong>「詳細設定を開く」</strong>を選ぶと、オプション画面が新しいタブで開きます。</li>
         </ol>
-        <p>Popupでは製品名・バージョンを確認できます。<br>
-          登録語句や表示言語はOptionsで変更します。</p>
+        <p>オプションポップアップでは製品名・バージョンを確認できます。<br>
+          登録語句や表示言語はオプション画面で変更します。</p>
       </section>
 
       <section aria-labelledby="options">
-        <h2 id="options">Optionsと表示言語</h2>
-        <p>Optionsには、表示言語、登録語句の管理、標準のワンクッションの説明、バックアップ、設定のリセットがあります。<br>
+        <h2 id="options">オプションと表示言語</h2>
+        <p>オプション画面には、表示言語、登録語句の管理、標準のワンクッションの説明、バックアップ、設定のリセットがあります。<br>
           登録語句の各操作は自動保存されるため、画面に表示される保存結果を確認してください。</p>
         <h3>自動／日本語／English</h3>
         <ul>
           <li><strong>自動：</strong>ChromeのUI言語が日本語系なら日本語、それ以外なら英語で表示します。</li>
-          <li><strong>日本語／English：</strong>選択した言語でOptions、Popup、Live ChatのワンクッションUIを表示します。</li>
+          <li><strong>日本語／English：</strong>オプション画面、オプションポップアップ、Live Chat・通常動画・Studioの動画コメント欄のGoogle Chrome 拡張機能の表示に、選択した言語を使います。</li>
         </ul>
         <p>言語設定は自動保存されます。<br>
           入力・編集中の切替には確認があり、保存成功後に未保存の入力内容がクリアされます。<br>
           必要な編集は先に保存してください。</p>
-        <p>Popupは次に開いたとき、Live Chatは新規起動または再読み込み時に言語を反映します。<br>
-          <strong>言語だけの変更では、すべてのLive Chatを閉じる必要はありません。</strong><br>
-          開いているLive Chatへのリアルタイム反映は行いません。</p>
-        <p>このWebページの日英切替は、拡張機能の表示言語設定を変更しません。<br>
-          通常動画・Studioの動画コメントUIの言語切替は未対応です。</p>
+        <p>オプションポップアップは次に開いたときに保存済みの言語を使います。<br>
+          保存後、開いている対象のコメント欄にも新しい表示言語の反映を試みます。<br>
+          すべての画面への通知到達や、反映の完了・所要時間は保証されません。<br>
+          反映されないときは、該当のLive Chatを閉じて開き直すか、通常動画・Studioの該当ページを再読み込みしてください。</p>
+        <p>表示言語だけの変更では、コメントの判定・遮蔽・手動表示の状態が保たれます。<br>
+          変更するのはGoogle Chrome 拡張機能の表示で、コメント本文や登録語句は翻訳しません。<br>
+          このWebページの日英切替は、Google Chrome 拡張機能の表示言語設定を変更しません。</p>
       </section>
 
       <section aria-labelledby="saved-words">
         <h2 id="saved-words">距離を置きたい言葉を管理する</h2>
-        <p>操作前に、<a href="#apply-settings">登録語句設定を反映する手順（D-1）</a>に従って、すべてのLive Chatを閉じてください。</p>
+        <p>各操作の後はオプション画面に表示される保存結果を確認し、<a href="#apply-settings">登録語句設定を反映する手順</a>に沿って対象画面での反映を確認してください。</p>
         <ol>
           <li><strong>追加：</strong>「言葉を追加」に2〜50文字の語句を入力し、「追加する」を選びます。<br>
             最大30件まで登録できます。</li>
@@ -113,12 +120,13 @@
           入力案内が出た場合は内容を確認してください。</p>
         <p class="note"><strong>標準ルールは独立しています。</strong><br>
           標準13語句によるワンクッションは、Masterや個別語句をOFFにしても有効です。<br>
-          Masterは拡張機能全体のON/OFFではありません。</p>
+          MasterはGoogle Chrome 拡張機能全体のON/OFFではありません。</p>
       </section>
 
       <section aria-labelledby="live-chat">
         <h2 id="live-chat">Live Chatのワンクッション</h2>
-        <p>対象コメントには、本文を読む前にワンクッションを表示します。<br>
+        <p>対象コメントは本文を先に隠します。<br>
+          SAFEと判定した本文は自動表示し、CUSHIONと判定した本文は隠したままワンクッションを表示します。<br>
           読みたい場合は、そのコメントの<strong>「内容を見る」</strong>を選んでください。<br>
           英語表示のボタンは「View Comment」です。</p>
         <p>この操作（Manual Reveal）で表示するのは当該コメントだけです。<br>
@@ -126,25 +134,45 @@
         <p>コメントを自動削除したり、投稿者を評価・制裁したりする機能ではありません。<br>
           判定できない場合などは本文が隠れたままになることもあります。<br>
           すべてのコメントや表示経路への保護は保証していません。</p>
+        <p>登録語句設定や表示言語を保存すると、開いているLive Chatにも反映を試みます。<br>
+          反映されない場合は、該当のLive Chatを閉じて開き直してください。</p>
+      </section>
+
+      <section aria-labelledby="video-comments">
+        <h2 id="video-comments">通常動画コメントのワンクッション</h2>
+        <p>通常のYouTube動画ページ（<code>/watch</code>・<code>/live</code>）でコメント欄を開きます。<br>
+          対応するトップレベルコメントの本文を先に隠し、標準13語句と有効な登録語句で判定します。<br>
+          SAFEの本文は自動表示され、CUSHIONの本文はワンクッションで隠れます。<br>
+          <strong>「内容を見る」</strong>を選ぶと、その1件だけを表示できます。</p>
+        <p>対応するページ内の動画切替（SPA）では、前の動画での手動表示を引き継がず、現在の動画のコメントを再判定して自動復帰を試みます。<br>
+          復帰しない場合や再読み込み案内が出た場合は、ページを再読み込みしてください。<br>
+          返信やShortsは対象外で、未知の画面構造での保護は確認できていません。</p>
+      </section>
+
+      <section aria-labelledby="studio-comments">
+        <h2 id="studio-comments">Studioの動画コメント</h2>
+        <p>YouTube Studioで対象の動画を選び、その動画の「コメント」を開きます。<br>
+          トップレベルコメントの本文を先に隠し、標準13語句と有効な登録語句で判定します。<br>
+          SAFEの本文は自動表示され、CUSHIONの本文はワンクッションで隠れます。<br>
+          <strong>「内容を見る」</strong>を選ぶと、その1件だけを表示できます。</p>
+        <p>画面内で別の動画に切り替えたときなどは、対象の本文を隠したまま再読み込みを案内する場合があります。<br>
+          案内が出たらページを再読み込みし、現在の動画のコメント欄を確認してください。<br>
+          チャンネル全体のコメント管理画面や返信は対象外です。</p>
       </section>
 
       <section aria-labelledby="apply-settings">
-        <h2 id="apply-settings">登録語句設定を反映する（D-1）</h2>
-        <p>登録語句の追加・編集・削除・Master／個別ON/OFFの変更、およびImport・Resetでは、次の順序を守ってください。</p>
+        <h2 id="apply-settings">登録語句設定を反映する</h2>
+        <p>登録語句の追加・編集・削除・Master／個別ON/OFFの変更、Import・Resetの保存後に、開いているLive Chat、通常動画、Studioの対象コメント欄への反映を試みます。</p>
         <ol class="steps">
-          <li><strong>すべてのLive Chatを閉じる。</strong><br>
-            通常の視聴ページ内、Studio内、ポップアウトなど、開いているLive Chatをすべて閉じます。</li>
-          <li><strong>Optionsで登録語句設定を変更する。</strong><br>
-            Import・Resetも、この段階で行います。</li>
+          <li><strong>オプション画面で登録語句設定を変更する。</strong></li>
           <li><strong>保存完了を確認する。</strong><br>
-            結果を確認できない場合は、Optionsを再読み込みして保存状態を確認してください。</li>
-          <li><strong>新しくLive Chatを開く。</strong><br>
-            新しいLive Chatで保存済みの設定を使います。</li>
+            保存結果が不明な場合は、<a href="#troubleshooting">制限・うまく動かない場合</a>をご覧ください。</li>
+          <li><strong>対象画面で変更が反映されたか確認する。</strong><br>
+            反映されない場合は、該当のLive Chatを閉じて開き直すか、通常動画・Studioの該当ページを再読み込みしてください。<br>
+            ページを閉じて開き直しても確認できます。</li>
         </ol>
-        <p class="note">すでに開いているLive Chatへ、登録語句設定を動的に反映する機能は未実装です。<br>
-          設定変更前にすべて閉じ、保存後に開き直してください。</p>
-        <p>表示言語だけを変更する場合は全閉鎖は不要です。<br>
-          新しい言語は、Live Chatの新規起動または再読み込みで反映します。</p>
+        <p class="note">オプション画面の保存完了表示は、設定が保存されたことを示します。<br>
+          すべての画面への通知到達・反映完了や、反映時刻・所要時間は保証されません。</p>
       </section>
 
       <section aria-labelledby="export">
@@ -164,13 +192,12 @@
       <section aria-labelledby="import">
         <h2 id="import">Import：バックアップから復元する</h2>
         <ol>
-          <li><a href="#apply-settings">D-1の手順</a>で、すべてのLive Chatを閉じます。<br>
-            現在の登録内容も残したい場合は、先にExportします。</li>
+          <li>現在の登録内容も残したい場合は、先にExportします。</li>
           <li>入力欄を空にし、編集中の語句を保存またはキャンセルします。<br>
-            「バックアップ」の<strong>「インポート」</strong>から、この拡張機能でExportしたJSONファイルを選びます。</li>
+            「バックアップ」の<strong>「インポート」</strong>から、このGoogle Chrome 拡張機能でExportしたJSONファイルを選びます。</li>
           <li>件数やON/OFFなどの確認表示を読み、問題がなければ<strong>「取り込んで置き換える」</strong>を選びます。<br>
             取りやめる場合は「キャンセル」を選びます。</li>
-          <li>保存完了を確認して、新しくLive Chatを開きます。</li>
+          <li>保存完了を確認し、<a href="#apply-settings">登録語句設定を反映する手順</a>に沿って対象画面での反映を確認します。</li>
         </ol>
         <p><strong>Importは全体置き換えです。</strong><br>
           現在の登録語句への追加ではなく、登録語句とMaster・個別ON/OFF設定をファイルの内容で置き換えます。<br>
@@ -180,11 +207,12 @@
       <section aria-labelledby="reset">
         <h2 id="reset">Reset：登録語句設定を初期化する</h2>
         <ol>
-          <li>必要な場合は事前にExportでバックアップし、<a href="#apply-settings">D-1の手順</a>で、すべてのLive Chatを閉じます。</li>
+          <li>入力欄を空にし、編集中の語句を保存またはキャンセルします。<br>
+            必要な場合は事前にExportでバックアップします。</li>
           <li>「設定のリセット」の<strong>「リセットする」</strong>を選び、確認表示を読みます。</li>
           <li>よければ<strong>「リセットを実行する」</strong>を選びます。<br>
             取りやめる場合は「キャンセル」を選びます。</li>
-          <li>完了を確認して、新しくLive Chatを開きます。</li>
+          <li>保存完了を確認し、<a href="#apply-settings">登録語句設定を反映する手順</a>に沿って対象画面での反映を確認します。</li>
         </ol>
         <p>登録語句と個別ON/OFF設定を削除し、<strong>Master ON・登録0件</strong>の初期状態に戻します。<br>
           表示言語設定と標準13語句のルールは変更しません。</p>
@@ -193,8 +221,13 @@
       <section aria-labelledby="troubleshooting">
         <h2 id="troubleshooting">制限・うまく動かない場合</h2>
         <ul>
-          <li>登録語句の変更後は、すべてのLive Chatを閉じていたか、保存完了を確認したかを確かめ、新しくLive Chatを開いてください。</li>
-          <li>Optionsを再読み込みし、登録語句、Master ON/OFF、個別ON/OFFの保存状態を確認してください。</li>
+          <li>登録語句設定や表示言語を保存しても反映されない場合は、該当のLive Chatを閉じて開き直すか、通常動画・Studioの該当ページを再読み込みしてください。<br>
+            オプションポップアップの表示言語が変わらない場合は、開き直してください。</li>
+          <li>コメントが隠れたまま再読み込み案内が出た場合は、案内に従ってページを再読み込みしてください。<br>
+            通常動画の切替後にコメント欄が復帰しない場合や、Studioで別の動画に切り替えた後に案内が出た場合も、再読み込みして現在の動画のコメント欄を確認してください。</li>
+          <li>登録語句設定の保存結果を確認できないという案内がオプション画面に出た場合は、その案内に従ってください。<br>
+            開いている対象画面をすべて閉じてから、オプション画面を再読み込みし、保存内容を確認してください。<br>
+            表示言語の保存結果が不明な場合は、オプション画面を再読み込みして確認してください。</li>
           <li><a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="現在の対象範囲（別タブで開きます）">現在の対象範囲</a>を確認してください。<br>
             返信やSuper Chatなどは対象外または未検証です。</li>
           <li>YouTube側の画面変更が影響している可能性もあります。<br>
