@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。">
+    <meta name="description" content="「こめんとみまもり Live」の現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。">
     <title>プライバシーポリシー | こめんとみまもり Live</title>
     <link rel="stylesheet" href="style.css">
     <link rel="alternate" hreflang="en" href="en/privacy.html">
@@ -27,11 +27,11 @@
 
     <main id="main-content" class="document" tabindex="-1">
       <header class="page-intro">
-        <p class="eyebrow">利用者向けガイド</p>
+        <p class="eyebrow">利用者様向けガイド</p>
         <h1>プライバシーポリシー</h1>
-        <p class="lead">現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。</p>
+        <p class="lead">「こめんとみまもり Live」の現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。</p>
         <dl class="page-meta">
-          <div><dt>最終更新日</dt><dd><time datetime="2026-11-20">2026年11月20日</time></dd></div>
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-23">2026年11月23日</time></dd></div>
           <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="開発中のサンプルページ">
@@ -46,9 +46,9 @@
         <h2 id="toc-title">目次</h2>
         <ol>
             <li><a href="#policy">基本方針</a></li>
-            <li><a href="#comments">コメント本文・判定結果</a></li>
+            <li><a href="#comments">YouTubeのコメント本文と判定結果</a></li>
             <li><a href="#settings">保存する設定情報</a></li>
-            <li><a href="#backup">Export・ImportとJSONファイル</a></li>
+            <li><a href="#backup">エクスポート・インポートとバックアップファイル</a></li>
             <li><a href="#no-action">現在の拡張機能で行わないこと</a></li>
             <li><a href="#hosting">WebサイトとGitHub Pages</a></li>
             <li><a href="#updates">今後の更新</a></li>
@@ -58,51 +58,49 @@
 
       <section aria-labelledby="policy">
         <h2 id="policy">基本方針</h2>
-        <p>利用者のプライバシーを尊重し、コメント本文と判定結果をブラウザ内で取り扱う設計です。<br>
+        <p>「こめんとみまもり Live」利用者様のプライバシーを尊重し、コメント本文と判定結果をブラウザ内で取り扱う設計です。<br>
           このページは、v0.1.0の現行実装に基づく、開発中のプロトタイプ用の暫定的なプライバシー説明です。</p>
-        <p>拡張機能によるコメント処理、設定の保存、利用者が保存するバックアップ、Webサイトのホスティングを区別して説明します。</p>
+        <p>拡張機能によるコメント処理、設定の保存、利用者様が保存するバックアップ、Webサイトのホスティングを区別して説明します。</p>
       </section>
 
       <section aria-labelledby="comments">
-        <h2 id="comments">コメント本文・判定結果</h2>
-        <p>現在の拡張機能は、対象コメントの本文と判定結果をブラウザ内のメモリ上で処理します。</p>
+        <h2 id="comments">YouTubeのコメント本文と判定結果</h2>
+        <p>このGoogle Chrome 拡張機能は、対応するYouTubeのコメント本文と判定結果を、利用者様のブラウザ内で処理します。</p>
         <ul>
-          <li>コメント本文を判定用の外部サーバーへ送信しません。</li>
-          <li>コメント本文を拡張機能が永続保存することはありません。</li>
-          <li>判定結果を外部送信・永続保存しません。</li>
+          <li>判定のためにコメント本文を外部サーバーへ送信しません。判定結果も外部へ送信しません。</li>
+          <li>コメント本文や判定結果を継続的に保存しません。</li>
           <li>外部AIによるコメント判定は行いません。</li>
         </ul>
-        <p>これは本拡張機能による処理の説明です。<br>
-          YouTube自体によるコメントの保存・通信などは、YouTube側のサービスの取り扱いに従います。</p>
+        <p>これは本機能による処理についての説明です。YouTube自体によるコメントの保存や通信は、YouTubeのサービスの取り扱いに従います。</p>
       </section>
 
       <section aria-labelledby="settings">
         <h2 id="settings">保存する設定情報</h2>
-        <p>次の設定を、Chrome拡張機能のローカル保存領域 <code>chrome.storage.local</code> に保存します。</p>
+        <p>次の設定は、Google Chromeの端末内の保存領域（<code>chrome.storage.local</code>）に保存します。</p>
         <ul>
-          <li>利用者が登録した「距離を置きたい言葉」</li>
-          <li>登録語句全体のMaster ON/OFF</li>
-          <li>各登録語句の個別ON/OFF</li>
+          <li>利用者様が「距離を置きたい言葉」に登録した言葉</li>
+          <li>「登録した言葉へのワンクッション」のON/OFF</li>
+          <li>登録した言葉ごとのON/OFF</li>
           <li>表示言語設定（自動／日本語／English）</li>
         </ul>
-        <p>登録語句は設定として保存しますが、コメント本文や判定結果を設定として保存するものではありません。<br>
-          設定の保存先はChromeのローカル領域で、クラウド同期用の保存領域は使用しません。</p>
-        <p>登録語句を削除する場合はOptionsで個別に削除するか、<a href="manual.html#reset">Reset</a>を利用できます。<br>
-          Resetで表示言語設定は変更されません。</p>
+        <p>登録した言葉は設定として保存します。YouTubeのコメント本文や判定結果は、設定として保存しません。<br>
+          設定の保存にはChromeのクラウド同期を使いません。<br>
+          設定変更の反映先となる画面を把握するための情報などは、ブラウザ内で一時的に扱います。</p>
+        <p>登録した言葉は設定画面で個別に削除できます。<a href="manual.html#reset">リセット</a>すると、登録した言葉と個別設定をすべて削除し、「登録した言葉へのワンクッション」はON、登録した言葉は0件に戻ります。<br>
+          リセットで表示言語は変わりません。標準の13個の言葉による判定は、登録した言葉のON/OFFとは独立して動作します。</p>
       </section>
 
       <section aria-labelledby="backup">
-        <h2 id="backup">Export・ImportとJSONファイル</h2>
-        <p>保存済みの登録語句とMaster・個別ON/OFF設定を、ローカルのJSONファイルへExportできます。<br>
-          OFFの語句も含みます。<br>
-          未保存の入力内容、表示言語設定、標準13語句はExport対象外です。</p>
-        <p><strong>Exportファイルには登録語句が平文で含まれます。</strong><br>
+        <h2 id="backup">エクスポート・インポートとバックアップファイル</h2>
+        <p>登録した言葉と、全体および言葉ごとのON/OFF設定は、バックアップファイル（JSON形式）として端末に保存できます。<br>
+          OFFにした言葉も含まれます。<br>
+          未保存の入力内容、表示言語設定、標準の13個の言葉は含まれません。</p>
+        <p><strong>エクスポートしたファイルには、登録した言葉がそのまま記録されます。</strong><br>
           ファイルの保存場所や共有相手は、ご自身で確認してください。<br>
           拡張機能がこのファイルを外部サーバーへアップロードする機能はありません。</p>
-        <p>Importは、選択したJSONを確認後、現在の登録語句設定を<strong>全体置き換え</strong>します。<br>
-          既存の語句への追加ではありません。<br>
+        <p>インポートでは、選んだファイルの内容を確認してから、現在の登録内容とON/OFF設定を<strong>すべて置き換えます。</strong><br>
           表示言語設定は変更しません。</p>
-        <p>操作方法は<a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="Export（別タブで開きます）">Export</a>・<a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="Import（別タブで開きます）">Import</a>、保存後の確認は<a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="登録語句設定を反映する手順（別タブで開きます）">登録語句設定を反映する手順</a>をご覧ください。</p>
+        <p>操作方法は<a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="エクスポート（別タブで開きます）">エクスポート</a>・<a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="インポート（別タブで開きます）">インポート</a>、保存後の確認は<a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="コメント欄で設定の反映を確認する手順（別タブで開きます）">コメント欄で設定の反映を確認する手順</a>をご覧ください。</p>
       </section>
 
       <section aria-labelledby="no-action">
@@ -113,7 +111,7 @@
           <li>外部AIによるコメント判定</li>
           <li>外部アクセス解析・テレメトリによる利用状況の収集</li>
         </ul>
-        <p>ワンクッションは、利用者本人がコメントの内容を見るかどうかを選ぶためのものです。<br>
+        <p>ワンクッションは、利用者様ご本人がコメントの内容を見るかどうかを選ぶためのものです。<br>
           これらは現行実装についての説明で、将来の機能変更時には説明を見直します。</p>
       </section>
 
@@ -131,7 +129,7 @@
         <h2 id="updates">今後の更新</h2>
         <p>現在は開発中のプロトタイプです。<br>
           機能の変更に応じて、この説明も更新する可能性があります。</p>
-        <p>正式公開前・Chrome Web Store申請前に、実装内容、保存する情報、外部通信の有無、利用者向け説明を改めて確認する予定です。<br>
+        <p>正式公開前・Chrome Web Store申請前に、実装内容、保存する情報、外部通信の有無、利用者様向け説明を改めて確認する予定です。<br>
           この暫定ページが、正式なプライバシーポリシーとしての法的な完全性を保証するものではありません。</p>
       </section>
 

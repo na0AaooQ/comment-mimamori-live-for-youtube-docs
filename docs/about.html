@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="YouTubeのコメントを読む前に、心のワンクッションを。目的・主な機能と、現在の対応範囲をご案内します。">
+    <meta name="description" content="YouTubeのコメントを読む前に、心のワンクッションを。「こめんとみまもり Live」の目的・主な機能と、現在の対応範囲をご案内します。">
     <title>サービス説明 | こめんとみまもり Live</title>
     <link rel="stylesheet" href="style.css">
     <link rel="alternate" hreflang="en" href="en/about.html">
@@ -27,18 +27,18 @@
 
     <main id="main-content" class="document" tabindex="-1">
       <header class="page-intro">
-        <p class="eyebrow">利用者向けガイド</p>
+        <p class="eyebrow">利用者様向けガイド</p>
         <h1>サービス説明</h1>
         <p class="lead">YouTubeのコメントを読む前に、心のワンクッションを。<br>
-          目的・主な機能と、現在の対応範囲をご案内します。</p>
+          「こめんとみまもり Live」の目的・主な機能と、現在の対応範囲をご案内します。</p>
         <dl class="page-meta">
-          <div><dt>最終更新日</dt><dd><time datetime="2026-11-20">2026年11月20日</time></dd></div>
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-23">2026年11月23日</time></dd></div>
           <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="開発中のサンプルページ">
           <p><strong>開発中のサンプルページ</strong></p>
-          <p>この拡張機能はプロトタイプです。<br>
-            Chrome Web Storeには未公開です。<br>
+          <p>このGoogle Chrome 拡張機能はプロトタイプです。<br>
+            Chrome ウェブストアには未公開です。<br>
             内容や操作は今後変更する場合があります。</p>
         </aside>
       </header>
@@ -55,59 +55,61 @@
 
       <section aria-labelledby="overview">
         <h2 id="overview">こめんとみまもり Liveとは</h2>
-        <p>「こめんとみまもり Live」は、YouTubeのコメントを読む前に、心に負荷がかかる可能性のある表現にワンクッションを置くGoogle Chrome拡張機能です。</p>
+        <p>「こめんとみまもり Live」は、YouTubeのコメントを読む前に、心に負荷がかかる可能性のある表現にワンクッションを置くGoogle Chrome 拡張機能です。</p>
         <p>コメントの内容を見るかどうかを、利用者様ご本人が選べることを大切にしています。<br>
           投稿者の人格評価・検閲・制裁を目的とした機能ではありません。</p>
       </section>
 
       <section aria-labelledby="features">
         <h2 id="features">主な機能</h2>
-        <p>対応するYouTubeライブ配信のコメント（Live Chat）、通常動画、YouTube Studioの動画コメントに、ワンクッションをかける機能を提供します。<br>
-          標準ルールでは、現時点で心理的な負担につながりうる強い表現13語句を判定に使います。<br>
-          有効な登録語句も同じ仕組みで判定し、標準語句か有効な登録語句に該当するコメントにワンクッションを表示します。<br>
-          本文を先に隠してから判定する方式をProtect-firstと呼びます。<br>
-          未判定の本文や、異常で判定できない本文は、既知の対象範囲では自動表示しません。</p>
+        <p>YouTubeライブチャット、通常動画、YouTube Shorts（YouTube ショート動画）、YouTube Studioの動画別コメント欄に対応しています。<br>
+          心理的な負担につながりうる標準の13個の言葉と、登録した言葉のうちワンクッションが有効なものを使って、対象のコメントを確認します。<br>
+          対応する画面では、確認中や確認できなかったコメントの内容は隠れたままです。</p>
         <ul>
-          <li><strong>コメントの表示：</strong>SAFEと判定した本文は自動表示します。<br>
-            CUSHIONと判定した本文は隠したまま、ワンクッションを表示します。</li>
-          <li><strong>距離を置きたい言葉：</strong>自分で語句を登録し、登録語句全体のMaster ON/OFFと、各語句の個別ON/OFFを設定できます。</li>
-          <li><strong>内容を見る（Manual Reveal）：</strong>ワンクッションが表示された当該コメントだけを、自分の操作で確認できます。</li>
-          <li><strong>Export・Import・Reset：</strong>登録語句とON/OFF設定のバックアップ・全体置き換えによる復元・初期化ができます。</li>
-          <li><strong>日本語・英語表示：</strong>Popup、Options、Live Chat・通常動画・Studioの動画コメント欄の拡張機能の表示に対応しています。<br>
-            コメント本文や登録語句を翻訳する機能ではありません。</li>
+          <li><strong>コメントの表示：</strong>ワンクッションが不要と判定されたコメントは自動で表示します。<br>
+            ワンクッションが必要なコメントは内容を隠したまま案内を表示します。「内容を見る」を押すと、選んだコメントだけを表示できます。</li>
+          <li><strong>距離を置きたい言葉：</strong>利用者様ご自身で、ワンクッションをかけたい言葉を登録できます。<br>
+            登録した言葉へのワンクッションは、全体のON/OFFと言葉ごとのON/OFFを設定できます。</li>
+          <li><strong>エクスポート・インポート・リセット：</strong>登録した言葉とON/OFF設定をバックアップしたり、全体を置き換えて復元したり、初期状態に戻したりできます。</li>
+          <li><strong>日本語・英語表示：</strong>設定画面、ポップアップ、YouTubeライブチャット、通常動画、Shorts、Studioの動画別コメント欄で、拡張機能を日本語・英語で表示できます。<br>
+            コメント本文や登録した言葉は元の言語のまま表示されます。</li>
         </ul>
-        <p class="note">Master OFFは、登録語句によるワンクッションを止める設定です。<br>
-          標準ルールは登録語句のON/OFFとは独立して、引き続き有効です。</p>
+        <p class="note">「登録した言葉へのワンクッション」をOFFにすると、登録した言葉によるワンクッションが止まります。<br>
+          標準の13個の言葉によるワンクッションは引き続き有効です。</p>
         <p>基本操作は<a href="manual.html" target="_blank" rel="noopener noreferrer" aria-label="操作マニュアル（別タブで開きます）">操作マニュアル</a>、データの取り扱いは<a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="プライバシーポリシー（別タブで開きます）">プライバシーポリシー</a>をご覧ください。</p>
       </section>
 
       <section aria-labelledby="scope">
         <h2 id="scope">現在の対象範囲</h2>
-        <h3>YouTube Live Chat</h3>
+        <h3>YouTube Live Chat（YouTube ライブ配信）</h3>
         <p>通常の視聴ページ内・YouTube Studio内・ポップアウトで表示するLive Chatの通常コメントが対象です。</p>
         <h3>通常動画コメント</h3>
-        <p>通常の動画ページ（<code>/watch</code>・<code>/live</code>）で、対応するトップレベルコメント（返信を除く）が対象です。<br>
-          対応するページ内の動画切替後は、現在の動画のコメントを再判定し、自動復帰を試みます。</p>
+        <p>通常の動画ページ（<code>/watch</code>・<code>/live</code>）で表示される、返信ではないコメントのうち、拡張機能が対応するものが対象です。<br>
+          対応する画面で、ページを再読み込みせずに別の動画へ切り替えた場合は、その動画のコメントの確認を再開しようとします。</p>
+        <h3>YouTube Shorts（YouTube ショート動画）のコメント欄</h3>
+        <p>拡張機能が対応する画面構成で表示される、返信ではないコメントにワンクッションを表示できます。</p>
+        <p>ワンクッションが必要と判定されたコメントは内容を隠し、「内容を見る」を押すと、そのコメントだけを表示します。</p>
+        <p>コメント欄を閉じて開き直した場合は、現在の設定に基づいて、コメントをもう一度確認します。</p>
         <h3>YouTube Studio「動画のコメント」</h3>
-        <p>Studioで開いた個別の動画のトップレベルコメントが対象です。<br>
+        <p>Studioで開いた個別の動画の、返信ではないコメントが対象です。<br>
           画面内で別の動画に切り替えたときなどは、対象の本文を隠したまま再読み込みを案内する場合があります。</p>
         <h3>対象外・未検証の範囲</h3>
-        <p>返信コメント、Studioのチャンネル全体のコメント管理画面、Super Chat、Super Sticker、メンバーシップ通知、Shortsは対象外です。<br>
-          未知の画面構造や大量コメント時の表示切替を含め、すべての表示経路での保護は確認できていません。</p>
+        <p>返信コメント、YouTube Studioのチャンネル全体のコメント管理画面とShorts専用コメント管理画面、Super Chat、Super Sticker、メンバーシップ通知は対象外です。<br>
+          対応を確認していない画面構成や、大量のコメントがあるときの表示切替など、コメントの表示方法によってはワンクッションが機能するか未確認です。</p>
       </section>
 
       <section aria-labelledby="limitations">
         <h2 id="limitations">制限と注意事項</h2>
         <ul>
           <li>開発中のプロトタイプです。<br>
-            Chrome Web Storeには未公開です。</li>
-          <li>ルールによる判定には、誤検知や見逃しが発生する可能性があります。</li>
+            Chrome ウェブストアには未公開です。</li>
+          <li>ワンクッションが不要なコメントを隠したり、必要なコメントを見逃したりする場合があります。</li>
           <li>YouTube側の画面構造の変更などにより、正常に動作しない可能性があります。</li>
-          <li>すべてのコメント・表示経路の保護や、完全な安全性を保証するものではありません。</li>
+          <li>すべてのコメントにワンクッションが機能する保証はありません。ページやコメント欄を開いた直後などに、コメントの内容が一時的に見える可能性があります。</li>
         </ul>
-        <p>登録語句設定や表示言語を保存すると、開いている対象のコメント欄への反映を試みます。<br>
-          すべての画面への通知到達や、反映の完了・所要時間は保証されません。<br>
-          反映されない場合の操作は、<a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="登録語句設定を反映する手順（別タブで開きます）">登録語句設定を反映する手順</a>をご覧ください。</p>
+        <p>登録した言葉の設定や表示言語を保存すると、開いている対象のコメント欄への反映を試みます。<br>
+          すべての画面に変更が反映される保証はなく、反映までにかかる時間も確約できません。<br>
+          反映されない場合は、<a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="コメント欄で設定の反映を確認する手順（別タブで開きます）">コメント欄で設定の反映を確認する手順</a>をご覧ください。</p>
       </section>
 
       <p class="back-to-top"><a href="#main-content">ページ上部へ戻る ↑</a></p>
