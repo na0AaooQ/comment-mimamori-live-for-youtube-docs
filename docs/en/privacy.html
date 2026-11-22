@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="How the current prototype handles comment text, matching results, and your settings.">
+    <meta name="description" content="How the current prototype of こめんとみまもり Live handles comment text, matching results, and your settings.">
     <title>Privacy Policy | こめんとみまもり Live</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="alternate" hreflang="ja" href="../privacy.html">
@@ -29,9 +29,9 @@
       <header class="page-intro">
         <p class="eyebrow">USER DOCUMENTATION</p>
         <h1>Privacy Policy</h1>
-        <p class="lead">How the current prototype handles comment text, matching results, and your settings.</p>
+        <p class="lead">How the current prototype of こめんとみまもり Live handles comment text, matching results, and your settings.</p>
         <dl class="page-meta">
-          <div><dt>Last updated</dt><dd><time datetime="2026-11-20">November 20, 2026</time></dd></div>
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-23">November 23, 2026</time></dd></div>
           <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="Sample page · In development">
@@ -45,9 +45,9 @@
         <h2 id="toc-title">On this page</h2>
         <ol>
             <li><a href="#policy">Our approach</a></li>
-            <li><a href="#comments">Comment text and matching results</a></li>
-            <li><a href="#settings">Settings stored locally</a></li>
-            <li><a href="#backup">Export, Import, and JSON files</a></li>
+            <li><a href="#comments">YouTube comment text and matching results</a></li>
+            <li><a href="#settings">Settings stored on your device</a></li>
+            <li><a href="#backup">Export, Import, and backup files</a></li>
             <li><a href="#no-action">What the current extension does not do</a></li>
             <li><a href="#hosting">This website and GitHub Pages</a></li>
             <li><a href="#updates">Future updates</a></li>
@@ -57,50 +57,48 @@
 
       <section aria-labelledby="policy">
         <h2 id="policy">Our approach</h2>
-        <p>The extension is designed to respect your privacy by handling comment text and matching results within your browser.<br>
+        <p>こめんとみまもり Live is designed to respect your privacy by handling comment text and matching results within your browser.<br>
           This is a provisional privacy explanation for prototype v0.1.0, based on its current implementation.</p>
         <p>We distinguish between comment processing by the extension, saved settings, backup files you save, and hosting of this website.</p>
       </section>
 
       <section aria-labelledby="comments">
-        <h2 id="comments">Comment text and matching results</h2>
-        <p>The current extension processes supported comments and matching results in browser memory.</p>
+        <h2 id="comments">YouTube comment text and matching results</h2>
+        <p>This Google Chrome extension processes supported YouTube comment text and matching results within your browser.</p>
         <ul>
-          <li>It does not send comment text to an external server for checking.</li>
-          <li>It does not persistently store comment text.</li>
-          <li>It does not transmit or persistently store matching results.</li>
+          <li>The extension does not send comment text to an external server for checking or send matching results outside your browser.</li>
+          <li>It does not persistently store comment text or matching results.</li>
           <li>It does not use external AI to check comments.</li>
         </ul>
-        <p>This describes processing by this extension.<br>
-          YouTube’s own storage and transmission of comments are handled under YouTube’s service policies.</p>
+        <p>This describes how the extension processes comments. YouTube’s own storage and transmission of comments are handled under YouTube’s service policies.</p>
       </section>
 
       <section aria-labelledby="settings">
-        <h2 id="settings">Settings stored locally</h2>
-        <p>The following settings are saved in <code>chrome.storage.local</code>, Chrome’s local extension storage:</p>
+        <h2 id="settings">Settings stored on your device</h2>
+        <p>The extension stores these settings on your device in Google Chrome’s local storage area (<code>chrome.storage.local</code>).</p>
         <ul>
-          <li>Your saved “Words I’d Rather Avoid”</li>
-          <li>The Master ON/OFF setting for all saved words</li>
+          <li>Words you’ve added under “Words I'd Rather Avoid”</li>
+          <li>The ON/OFF setting for “Pause for Saved Words”</li>
           <li>Individual ON/OFF settings for each word</li>
-          <li>The display language preference: Automatic, Japanese, or English</li>
+          <li>The display language preference (Automatic, Japanese, or English)</li>
         </ul>
-        <p>Saved words are stored as settings.<br>
-          Comment text and matching results are not saved as settings.<br>
-          Settings use Chrome’s local storage area, not its cloud sync storage area.</p>
-        <p>You can delete saved words individually in Options or use <a href="manual.html#reset">Reset</a>.<br>
-          Reset does not change your display language preference.</p>
+        <p>Your saved words are stored as settings. YouTube comment text and matching results are not stored as settings.<br>
+          The extension does not use Chrome cloud sync for these settings.<br>
+          It temporarily keeps information in your browser, such as which open screens to update after a settings change.</p>
+        <p>You can delete saved words individually on the Settings page. <a href="manual.html#reset">Reset</a> deletes all saved words and their individual settings, turns “Pause for Saved Words” ON, and leaves you with zero saved words.<br>
+          Reset keeps your display language preference. Standard Pause continues to check for the 13 standard words and phrases independently of your saved words’ ON/OFF settings.</p>
       </section>
 
       <section aria-labelledby="backup">
-        <h2 id="backup">Export, Import, and JSON files</h2>
-        <p>You can export saved words, including words set to OFF, and their Master and individual ON/OFF settings to a local JSON file.<br>
-          Unsaved input, your display language preference, and the 13 standard terms are excluded.</p>
+        <h2 id="backup">Export, Import, and backup files</h2>
+        <p>You can export saved words, including words set to OFF, and their overall and individual ON/OFF settings to a backup file (JSON format) on your device.<br>
+          The file excludes unsaved input, your display language preference, and the 13 standard words and phrases.</p>
         <p><strong>Exported files contain your saved words in plain text.</strong><br>
           Check where you save them and whom you share them with.<br>
           The extension has no feature that uploads these files to an external server.</p>
-        <p>After you review a selected JSON file, Import <strong>replaces all current saved-word settings</strong>.<br>
-          It does not append to your existing words or change your display language preference.</p>
-        <p>See <a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="Export (opens in a new tab)">Export</a> and <a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="Import (opens in a new tab)">Import</a> for instructions, and see <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="how to apply saved-word settings (opens in a new tab)">how to apply saved-word settings</a> to check for changes after saving.</p>
+        <p>After you review the selected file, Import <strong>replaces all your current saved words and their ON/OFF settings</strong>.<br>
+          Your display language stays the same.</p>
+        <p>See <a href="manual.html#export" target="_blank" rel="noopener noreferrer" aria-label="Export (opens in a new tab)">Export</a> and <a href="manual.html#import" target="_blank" rel="noopener noreferrer" aria-label="Import (opens in a new tab)">Import</a> for instructions, and see <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="how to check for changes in the comments (opens in a new tab)">how to check for changes in the comments</a> after saving.</p>
       </section>
 
       <section aria-labelledby="no-action">

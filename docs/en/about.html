@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A moment to pause before reading YouTube comments. Learn about the purpose, features, and current scope of this extension.">
+    <meta name="description" content="A moment to pause before reading YouTube comments. Learn about the purpose, features, and current scope of こめんとみまもり Live.">
     <title>About | こめんとみまもり Live</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="alternate" hreflang="ja" href="../about.html">
@@ -30,14 +30,14 @@
         <p class="eyebrow">USER DOCUMENTATION</p>
         <h1>About</h1>
         <p class="lead">A moment to pause before reading YouTube comments.<br>
-          Learn about the purpose, features, and current scope of this extension.</p>
+          Learn about the purpose, features, and current scope of こめんとみまもり Live.</p>
         <dl class="page-meta">
-          <div><dt>Last updated</dt><dd><time datetime="2026-11-20">November 20, 2026</time></dd></div>
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-23">November 23, 2026</time></dd></div>
           <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
         </dl>
         <aside class="notice" aria-label="Sample page · In development">
           <p><strong>Sample page · In development</strong></p>
-          <p>This extension is a prototype and is not published in the Chrome Web Store.<br>
+          <p>This Google Chrome extension is a prototype and is not published in the Chrome Web Store.<br>
             Features and instructions may change.</p>
         </aside>
       </header>
@@ -61,39 +61,40 @@
 
       <section aria-labelledby="features">
         <h2 id="features">Main features</h2>
-        <p>The extension adds a pause for supported YouTube live stream comments (Live Chat), regular video comments, and video comments in YouTube Studio.<br>
-          The standard rules currently check for 13 strong expressions that may be distressing.<br>
-          The same rules check for enabled words or phrases you’ve saved.<br>
-          A pause appears when a comment matches a standard term or an enabled saved term.<br>
-          Protect-first means hiding comment text before checking it.<br>
-          Within supported page layouts, the extension leaves text hidden while it checks a comment or if the check fails.</p>
+        <p>The extension supports YouTube Live Chat, regular video comments, comments on YouTube Shorts, and comments for individual videos in YouTube Studio.<br>
+          The extension checks supported comments for 13 standard words and phrases that may be distressing and for saved words or phrases you’ve turned on.<br>
+          On supported layouts, comment text stays hidden while a check is in progress or if the check cannot finish.</p>
         <ul>
-          <li><strong>Comment display:</strong> shows comments marked SAFE automatically.<br>
-            For comments marked CUSHION, the text stays hidden behind a pause.</li>
-          <li><strong>Words I’d Rather Avoid:</strong> lets you save words or phrases, turn matching for all saved words ON/OFF with the Master switch, and turn each word ON/OFF individually.</li>
-          <li><strong>View Comment (Manual Reveal):</strong> lets you choose to view the individual comment behind a pause.</li>
-          <li><strong>Export, Import, and Reset:</strong> backs up saved words and their ON/OFF settings, restores them by replacing the whole set, or resets them to their defaults.</li>
-          <li><strong>Japanese and English:</strong> supports the Popup, Options, and the extension’s interface in Live Chat, regular video comments, and Studio’s video comments pages.<br>
-            This does not translate comments or your saved words.</li>
+          <li><strong>Showing comments:</strong> comments that do not need a pause appear automatically.<br>
+            Comments that need a pause stay hidden behind a notice. Select “View Comment” to reveal only the comment you choose.</li>
+          <li><strong>Words I'd Rather Avoid:</strong> you can add words or phrases that you would prefer to read after a pause.<br>
+            You can turn the pause for all your saved words ON or OFF, or change the setting for each word individually.</li>
+          <li><strong>Export, Import, and Reset:</strong> back up your saved words and their ON/OFF settings, restore them by replacing the whole set, or reset them to their defaults.</li>
+          <li><strong>Japanese and English:</strong> choose the extension’s display language for Settings, the pop-up, Live Chat, regular video comments, Shorts, and individual video comments in Studio.<br>
+            Comment text and your saved words stay in their original language.</li>
         </ul>
-        <p class="note">Turning Master OFF stops matching for your saved words.<br>
-          Standard rules remain active independently of the Master and individual word switches.</p>
+        <p class="note">Turning “Pause for Saved Words” OFF stops the pause for your saved words.<br>
+          Standard Pause continues to check for the 13 standard words and phrases.</p>
         <p>See the <a href="manual.html" target="_blank" rel="noopener noreferrer" aria-label="User Guide (opens in a new tab)">User Guide</a> for basic steps and the <a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy (opens in a new tab)">Privacy Policy</a> for information about data handling.</p>
       </section>
 
       <section aria-labelledby="scope">
         <h2 id="scope">Current scope</h2>
-        <h3>YouTube Live Chat</h3>
+        <h3>YouTube Live Chat (live streams)</h3>
         <p>Regular Live Chat messages on viewing pages, in YouTube Studio, and in pop-out windows are supported.</p>
         <h3>Regular video comments</h3>
-        <p>Supported top-level comments (excluding replies) on regular video pages (<code>/watch</code> and <code>/live</code>) are covered.<br>
-          When you switch videos through supported in-page navigation, the extension tries to check the current video’s comments and resume automatically.</p>
+        <p>The extension covers supported comments that are not replies on regular video pages (<code>/watch</code> and <code>/live</code>).<br>
+          When you switch videos without reloading on a supported page, the extension tries to resume checking comments on the new video.</p>
+        <h3>Comments on YouTube Shorts</h3>
+        <p>The extension adds a pause to comments that are not replies on supported Shorts layouts.</p>
+        <p>When a comment needs a pause, its content stays hidden. You can select “View Comment” to reveal only that comment.</p>
+        <p>When you close and reopen the comments panel, the extension checks the comments again using your current settings.</p>
         <h3>Video comments in YouTube Studio</h3>
-        <p>Top-level comments on an individual video’s comments page in Studio are supported.<br>
+        <p>The extension covers comments that are not replies on an individual video’s comments page in Studio.<br>
           When you switch to another video within Studio, the extension may keep supported comments hidden and ask you to reload the page.</p>
         <h3>Outside the scope or not yet verified</h3>
-        <p>Replies, Studio’s channel-wide comment management page, Super Chat, Super Stickers, membership notifications, and Shorts are outside the scope.<br>
-          Protection has yet to be verified for every way comments appear, including unfamiliar page layouts and changes in how large numbers of comments are displayed.</p>
+        <p>Replies, YouTube Studio’s channel-wide and Shorts-specific comment management pages, Super Chat, Super Stickers, and membership notifications are outside the scope.<br>
+          Some ways comments appear remain unverified, including unfamiliar page layouts and changes in how large numbers of comments are displayed.</p>
       </section>
 
       <section aria-labelledby="limitations">
@@ -101,13 +102,13 @@
         <ul>
           <li>This is a prototype in development.<br>
             It is not published in the Chrome Web Store.</li>
-          <li>Rule-based matching can produce false positives and miss comments.</li>
+          <li>The extension may hide comments that do not need a pause or miss comments that do.</li>
           <li>Changes to YouTube’s page structure may prevent the extension from working correctly.</li>
-          <li>It does not guarantee complete safety or protection for every comment and display path.</li>
+          <li>The pause is not guaranteed to work for every comment or every way comments appear. Comment text may be visible briefly, including when you first open a page or comments panel.</li>
         </ul>
-        <p>When you save changes to your word settings or display language, the extension tries to update open, supported comment sections.<br>
-          There is no guarantee that every screen will be notified, that updates will complete, or how long they will take.<br>
-          If changes do not appear, see <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="how to apply saved-word settings (opens in a new tab)">how to apply saved-word settings</a>.</p>
+        <p>When you save changes to the settings for your saved words or to your display language, the extension tries to update open, supported comment sections.<br>
+          Updates may take time or fail to appear on some screens.<br>
+          If changes do not appear, see <a href="manual.html#apply-settings" target="_blank" rel="noopener noreferrer" aria-label="how to check for changes in the comments (opens in a new tab)">how to check for changes in the comments</a>.</p>
       </section>
 
       <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>
