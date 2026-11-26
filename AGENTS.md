@@ -12,7 +12,7 @@
 ## 公開ファイルの管理
 
 - `docs/about.html`、`docs/manual.html`、`docs/privacy.html`と、`docs/en/`配下の対応する3ページを維持します。
-- 共通CSSの`docs/style.css`と、操作マニュアル専用の共通JavaScript `docs/assets/js/manual.js` を管理し、日本語・英語の内容を整合させます。
+- 共通CSSの`docs/style.css`と、日英のサービス説明と操作マニュアルで使用する共通JavaScript `docs/assets/js/manual.js` を管理し、日本語・英語の内容を整合させます。画像拡大機能は日英の操作マニュアルで、動画掲載機能は日英のサービス説明と操作マニュアルで使用します。
 - 操作マニュアル用の画像は `docs/assets/img/manual/` に配置し、開発者本人が公開を承認したもののみを管理します。
 - 既存URL、ページ間リンク、言語切替リンク、目次アンカーを維持します。
 - HTMLの`lang`属性、キーボード操作、フォーカス表示、レスポンシブ表示に配慮します。
@@ -40,7 +40,7 @@ Privateリポジトリへのリンクや公開済みPRの事実関係を記載�
 - GitHub Actionsワークフロー
 - 動画やその他の外部サービス
 
-日英の操作マニュアルには、開発者本人が承認した操作イメージ動画3本（`lO5F2GKgUY8`、`ha44KRAgjh4`、`zoMa8pCGfPg`）に限り、YouTubeのプライバシー強化モードで埋め込みます。Click-to-load方式を使用し、利用者様が対象の動画を表示するまでは、YouTube関連の埋め込み通信や先読みを行いません。
+日英のサービス説明と操作マニュアルには、開発者本人が承認した操作イメージ動画3本（`lO5F2GKgUY8`、`ha44KRAgjh4`、`zoMa8pCGfPg`）に限り、YouTubeのプライバシー強化モードで埋め込みます。Click-to-load方式を使用し、利用者様が対象の動画を表示するまでは、YouTube関連の埋め込み通信や先読みを行いません。
 
 ## GitHub Pagesの公開運用
 
