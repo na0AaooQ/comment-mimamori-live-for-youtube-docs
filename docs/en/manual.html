@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Learn how to open the settings for こめんとみまもり Live, save words, use the pause, and back up your settings.">
+    <meta name="description" content="Use images and videos to learn how to open settings, save words, use the pause, and back up settings in こめんとみまもり Live v0.2.0 BETA.">
     <title>User Guide | こめんとみまもり Live</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="alternate" hreflang="ja" href="../manual.html">
+    <script src="../assets/js/manual.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -29,15 +30,15 @@
       <header class="page-intro">
         <p class="eyebrow">USER DOCUMENTATION</p>
         <h1>User Guide</h1>
-        <p class="lead">Learn how to open the settings for こめんとみまもり Live, save words, use the pause, and back up your settings.</p>
+        <p class="lead">Use images and videos to learn how to open settings, save words, use the pause, and back up settings in こめんとみまもり Live v0.2.0 BETA.</p>
         <dl class="page-meta">
-          <div><dt>Last updated</dt><dd><time datetime="2026-11-23">November 23, 2026</time></dd></div>
-          <div><dt>Extension version</dt><dd>v0.1.0</dd></div>
+          <div><dt>Last updated</dt><dd><time datetime="2026-11-25">November 25, 2026</time></dd></div>
+          <div><dt>Extension version</dt><dd>v0.2.0 BETA</dd></div>
         </dl>
-        <aside class="notice" aria-label="Sample page · In development">
-          <p><strong>Sample page · In development</strong></p>
-          <p>This Google Chrome extension is a prototype.<br>
-            It is not published in the Chrome Web Store.<br>
+        <aside class="notice" aria-label="About the BETA version">
+          <p><strong>About the BETA version</strong></p>
+          <p>This Google Chrome extension is a BETA version still in development.<br>
+            It is not currently available to the general public through the Chrome Web Store.<br>
             Features and instructions may change.</p>
         </aside>
       </header>
@@ -46,6 +47,7 @@
         <h2 id="toc-title">On this page</h2>
         <ol>
             <li><a href="#getting-started">Before you begin</a></li>
+            <li><a href="#demo-videos">Video Demonstrations</a></li>
             <li><a href="#popup">Open settings for こめんとみまもり Live</a></li>
             <li><a href="#options">Settings and display language</a></li>
             <li><a href="#saved-words">Manage Words I'd Rather Avoid</a></li>
@@ -53,6 +55,7 @@
             <li><a href="#video-comments">Use the pause in regular video comments</a></li>
             <li><a href="#shorts-comments">Use the pause in YouTube Shorts comments</a></li>
             <li><a href="#studio-comments">Video comments in Studio</a></li>
+            <li><a href="#reveal-comment">Reveal Individual Comments</a></li>
             <li><a href="#apply-settings">Apply settings for your saved words to comments</a></li>
             <li><a href="#export">Export your settings to a backup file</a></li>
             <li><a href="#import">Import your settings from a backup file</a></li>
@@ -63,26 +66,89 @@
 
       <section aria-labelledby="getting-started">
         <h2 id="getting-started">Before you begin</h2>
-        <p>This sample guide covers v0.1.0 of the Google Chrome extension, a prototype still in development.<br>
-          It is not published in the Chrome Web Store.<br>
-          It is intended for people who have already loaded the Google Chrome extension for development testing.</p>
+        <p>This guide explains how to use v0.2.0 BETA of the こめんとみまもり Live Google Chrome extension.<br>
+          It assumes you have already loaded the extension in Chrome.</p>
         <p>The Google Chrome extension covers regular messages in YouTube live stream comments (Live Chat).<br>
           On regular videos, YouTube Shorts, and individual video comments pages in YouTube Studio, it covers comments that are not replies on supported layouts.<br>
           The extension uses the same rules in all four places to check for the 13 standard words and phrases and any saved words you’ve turned on.<br>
           The extension’s interface supports Japanese and English.<br>
           Replies, Super Chat, and similar messages are outside the scope, and unfamiliar page layouts are unverified.<br>
           See the <a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="current scope (opens in a new tab)">current scope</a>.</p>
+        <div class="manual-image-instructions" hidden>
+          <p>Select an image to enlarge it. Red outlines indicate the main areas to interact with or check.</p>
+          <p>You can also use your keyboard. Focus an image and press Enter or Space to enlarge it. Press Esc to close it.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="demo-videos">
+        <h2 id="demo-videos">Video Demonstrations</h2>
+        <p>The following videos demonstrate how to configure こめんとみまもり Live and use the pause feature in YouTube comments.</p>
+        <p>Selecting “Show Video” connects your browser to YouTube. Embedded videos use YouTube's Privacy Enhanced Mode.</p>
+        <p>Videos do not play automatically. Once the player is displayed, select its play button to watch the video.</p>
+        <p>The videos show the extension's interface in Japanese. Some screens and instructions may differ from the current BETA version.</p>
+        <p>You can also learn how to use the extension by following the written instructions and images in this guide, without watching the videos.</p>
+        <p>For more information, please see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <article class="manual-video" data-video-id="lO5F2GKgUY8" aria-labelledby="regular-video-demo">
+          <h3 id="regular-video-demo">Regular Video Comments</h3>
+          <p>This video demonstrates saving words and using the pause in regular YouTube video comments.</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="Show Video: Regular Video Comments" aria-describedby="regular-video-demo-connection">Show Video</button>
+                <p id="regular-video-demo-connection">Selecting this button connects to YouTube.</p>
+              </div>
+              <p class="manual-video-fallback">If the video cannot be displayed, watch it directly on YouTube.</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/lO5F2GKgUY8" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube: Regular Video Comments (Opens in a new tab)">Watch on YouTube</a> (Opens in a new tab)</p>
+        </article>
+
+        <article class="manual-video" data-video-id="ha44KRAgjh4" aria-labelledby="studio-video-demo">
+          <h3 id="studio-video-demo">Video Comments in YouTube Studio</h3>
+          <p>This video demonstrates using the pause on an individual video's comments page in YouTube Studio.</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="Show Video: Video Comments in YouTube Studio" aria-describedby="studio-video-demo-connection">Show Video</button>
+                <p id="studio-video-demo-connection">Selecting this button connects to YouTube.</p>
+              </div>
+              <p class="manual-video-fallback">If the video cannot be displayed, watch it directly on YouTube.</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/ha44KRAgjh4" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube: Video Comments in YouTube Studio (Opens in a new tab)">Watch on YouTube</a> (Opens in a new tab)</p>
+        </article>
+
+        <article class="manual-video" data-video-id="zoMa8pCGfPg" aria-labelledby="shorts-video-demo">
+          <h3 id="shorts-video-demo">YouTube Shorts Comments</h3>
+          <p>This video demonstrates using the pause in YouTube Shorts comments.</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="Show Video: YouTube Shorts Comments" aria-describedby="shorts-video-demo-connection">Show Video</button>
+                <p id="shorts-video-demo-connection">Selecting this button connects to YouTube.</p>
+              </div>
+              <p class="manual-video-fallback">If the video cannot be displayed, watch it directly on YouTube.</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/zoMa8pCGfPg" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube: YouTube Shorts Comments (Opens in a new tab)">Watch on YouTube</a> (Opens in a new tab)</p>
+        </article>
       </section>
 
       <section aria-labelledby="popup">
         <h2 id="popup">Open settings for こめんとみまもり Live</h2>
         <ol>
-          <li>In Chrome’s toolbar, open the Extensions menu and select こめんとみまもり Live (listed as “こめんとみまもり Live Protect-first PoC” in the development build). This opens a small settings window called a pop-up.<br>
+          <li>In Chrome’s toolbar, open the Extensions menu and select “こめんとみまもり Live BETA.” This opens a small settings window called a pop-up.<br>
             If you’ve pinned the extension to the toolbar, you can also select its icon there.</li>
           <li>Select <strong>“Open Settings”</strong> to open the Settings page in a new tab.</li>
         </ol>
         <p>The pop-up shows the product name and version.<br>
           Use the Settings page to change saved words and the display language.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-01_popup_002_EN.png" width="1200" height="740" loading="lazy" decoding="async"
+            alt="Extension popup with the Open Settings button">
+          <figcaption>Click the extension icon in the Chrome toolbar, then select “Open Settings.”</figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="options">
@@ -94,6 +160,22 @@
           <li><strong>Automatic (Chrome's display language)</strong> uses Japanese if Chrome displays in Japanese, and English otherwise.</li>
           <li><strong>日本語 / English</strong> uses the selected language for Settings, the pop-up, and the extension’s interface in Live Chat, regular video comments, Shorts, and individual video comments in Studio.</li>
         </ul>
+        <p>The first two images show the steps in the Japanese interface.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-02_options-language_001_auto.png" width="1816" height="1760" loading="lazy" decoding="async"
+            alt="Settings page with automatic language selection enabled">
+          <figcaption>Use the Display Language setting to choose your preferred language.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-02_options-language_002_select.png" width="1830" height="916" loading="lazy" decoding="async"
+            alt="Language menu showing Automatic, Japanese, and English">
+          <figcaption>Choose Automatic, Japanese, or English.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-02_options-language_004_EN.png" width="1800" height="1760" loading="lazy" decoding="async"
+            alt="Settings page with English selected and the language saved">
+          <figcaption>Select English to display the extension interface in English.</figcaption>
+        </figure>
         <p>Your language preference is saved automatically.<br>
           If you are entering or editing a word, a confirmation appears before switching.<br>
           Unsaved input is cleared after the language change is successfully saved, so save any edits you need first.</p>
@@ -111,7 +193,18 @@
         <p>After each action, check the save result on the Settings page and follow the <a href="#apply-settings">steps to check for changes in the comments</a>.</p>
         <ol>
           <li><strong>Add:</strong> enter a word or phrase of 2–50 characters under “Add a Word or Phrase,” then select “Add.”<br>
-            You can save up to 30 entries.</li>
+            You can save up to 30 entries.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-03_options-saved-words_003_EN.png" width="1712" height="1168" loading="lazy" decoding="async"
+                alt="Settings page with “test comment” entered in the input field">
+              <figcaption>Enter a word or phrase and click “Add.”</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-03_options-saved-words_004_EN.png" width="1744" height="1500" loading="lazy" decoding="async"
+                alt="Saved Words list containing the newly added “test comment”">
+              <figcaption>Check that the new entry appears under Saved Words.</figcaption>
+            </figure>
+          </li>
           <li><strong>Edit:</strong> select “Edit” beside a saved word, make your changes, then select “Save.”<br>
             Select “Cancel” to discard the edit.</li>
           <li><strong>Delete:</strong> select “Delete” for the entry and confirm.</li>
@@ -130,6 +223,26 @@
           Comments that do not need a pause appear automatically. Comments that need a pause stay hidden behind a notice.<br>
           If you want to read it, select <strong>“View Comment”</strong> for that comment.<br>
           In Japanese, the button is labeled “内容を見る”.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-04_live-chat-cushion_005_EN.png" width="1626" height="1564" loading="lazy" decoding="async"
+            alt="Settings page with “test comment” saved and the pause enabled">
+          <figcaption>Add a word or phrase you would rather avoid and enable Pause for Saved Words.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-04_live-chat-cushion_006_EN.png" width="2762" height="1578" loading="lazy" decoding="async"
+            alt="Live viewing page showing a greeting and “test comment”">
+          <figcaption>This example shows test messages posted in YouTube Live Chat.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-04_live-chat-cushion_007_EN.png" width="2958" height="1574" loading="lazy" decoding="async"
+            alt="Studio live chat showing a pause and the View Comment button">
+          <figcaption>A pause appears before the matching comment in the Studio live stream screen. Select “View Comment” to read it.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-04_live-chat-cushion_008_EN.png" width="2954" height="1568" loading="lazy" decoding="async"
+            alt="Studio live chat showing the revealed “test comment”">
+          <figcaption>The selected comment becomes visible after selecting “View Comment.”</figcaption>
+        </figure>
         <p>“View Comment” shows only the comment you choose.<br>
           The comment may be hidden again if its text or other details change.</p>
         <p>The extension does not automatically delete comments, judge commenters, or penalize anyone.<br>
@@ -145,6 +258,16 @@
           The extension keeps supported comments that are not replies hidden while checking for the 13 standard words and phrases and any saved words you’ve turned on.<br>
           Comments that do not need a pause appear automatically. Comments that need a pause stay hidden behind a notice.<br>
           Select <strong>“View Comment”</strong> to reveal only that comment.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-05_video-comments-cushion_003_EN.png" width="1902" height="1586" loading="lazy" decoding="async"
+            alt="Regular video comment section showing a pause and the View Comment button">
+          <figcaption>A pause appears before the matching comment. Select “View Comment” if you wish to read it.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-05_video-comments-cushion_004_EN.png" width="1904" height="1592" loading="lazy" decoding="async"
+            alt="Regular video comment section showing the revealed “test comment”">
+          <figcaption>The selected comment becomes visible.</figcaption>
+        </figure>
         <p>When you switch videos without reloading on a supported page, the extension clears any reveals made with “View Comment” on the previous video and tries to resume checking comments on the new video.<br>
           If the extension does not resume checking comments, or you see a reload prompt, reload the page.<br>
           Replies are outside the scope. Some layouts have yet to be verified.</p>
@@ -162,6 +285,16 @@
         </ol>
         <p>If changes to your settings do not appear, or you see a message asking you to reload, reload the YouTube Shorts page.</p>
         <p>Replies are not currently covered by the pause feature.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-06_shorts-comments-cushion_003_EN.png" width="2502" height="1602" loading="lazy" decoding="async"
+            alt="Shorts comment panel showing a pause and the View Comment button">
+          <figcaption>A pause also appears before matching comments in the YouTube Shorts comment section.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-06_shorts-comments-cushion_004_EN.png" width="2478" height="1578" loading="lazy" decoding="async"
+            alt="Shorts comment panel showing the revealed Japanese test comment">
+          <figcaption>Select “View Comment” to reveal the selected comment.</figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="studio-comments">
@@ -170,33 +303,87 @@
           The extension keeps supported comments that are not replies hidden while checking for the 13 standard words and phrases and any saved words you’ve turned on.<br>
           Comments that do not need a pause appear automatically. Comments that need a pause stay hidden behind a notice.<br>
           Select <strong>“View Comment”</strong> to reveal only that comment.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-07_studio-comments-cushion_003_EN.png" width="2312" height="1560" loading="lazy" decoding="async"
+            alt="YouTube Studio video comments page showing the View Comment button">
+          <figcaption>Open the supported video's Comments page in YouTube Studio. Matching comments are shown with a pause.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-07_studio-comments-cushion_004_EN.png" width="2330" height="1548" loading="lazy" decoding="async"
+            alt="YouTube Studio video comments page showing the revealed “test comment”">
+          <figcaption>Select “View Comment” to read the selected comment.</figcaption>
+        </figure>
         <p>When you switch to another video within Studio, the extension may keep supported comments hidden and ask you to reload.<br>
           If prompted, reload the page and check the current video’s comments.<br>
           Replies and the channel-wide and Shorts-specific comment management pages are outside the scope.</p>
       </section>
 
+      <section aria-labelledby="reveal-comment">
+        <h2 id="reveal-comment">Reveal Individual Comments</h2>
+        <p>You do not have to read a comment that has been given a pause. If and when you wish to read it, you can choose “View Comment.”</p>
+        <p>This feature reveals only the comment you selected. A revealed comment may be hidden again if its content or the state of the page changes.</p>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-11_video-comments-reveal_003_EN.png" width="1672" height="1596" loading="lazy" decoding="async"
+            alt="Two comments with a pause, highlighting the upper View Comment button">
+          <figcaption>When multiple comments have a pause, select “View Comment” on the individual comment you wish to read.</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="../assets/img/manual/IMG-11_video-comments-reveal_004_EN.png" width="1666" height="1582" loading="lazy" decoding="async"
+            alt="Upper comment revealed while the lower comment retains its pause">
+          <figcaption>In this example, only the selected comment is revealed, while the other comment retains its pause.</figcaption>
+        </figure>
+      </section>
+
       <section aria-labelledby="apply-settings">
         <h2 id="apply-settings">Apply settings for your saved words to comments</h2>
-        <p>When you save additions, edits, deletions, ON/OFF changes for all saved words or individual words, an import, or a reset, the extension tries to update supported comment sections already open in YouTube Live Chat, regular videos, Shorts, and Studio.</p>
+        <p>After saving your settings, the extension tries to update supported comment sections that are already open in YouTube Live Chat, regular videos, YouTube Shorts, and YouTube Studio.</p>
         <ol class="steps">
-          <li><strong>Change the settings for your saved words on the Settings page.</strong></li>
+          <li><strong>Change the settings for your saved words on the Settings page.</strong><br>
+            This includes adding, editing, or deleting words, changing overall or individual ON/OFF settings, importing, and resetting.</li>
           <li><strong>Check the Settings page for the save confirmation.</strong><br>
             If the save result is unclear, see <a href="#troubleshooting">Limitations and troubleshooting</a>.</li>
           <li><strong>Check whether the change appears in the affected comments.</strong><br>
-            If it does not, close and reopen the affected Live Chat or Shorts comments panel, or reload the affected page.<br>
-            You can also close and reopen the page.</li>
+            If a change does not appear, close and reopen the affected screen, or reload the page.</li>
         </ol>
         <p class="note">The save confirmation on the Settings page means your settings were stored.<br>
-          Updates may take time or fail to appear on some screens.</p>
+          Changes are not guaranteed to appear on every open page. Updates may take time.</p>
       </section>
 
       <section aria-labelledby="export">
         <h2 id="export">Export your settings to a backup file</h2>
         <ol>
           <li>Clear the input field, and save or cancel any word you are editing.<br>
-            Export is unavailable while entering or editing a word.</li>
-          <li>Select <strong>“Export”</strong> under “Backup” and save the backup file (JSON format) on your device.</li>
+            Export is unavailable while entering or editing a word.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-08_options-backup_006_EN.png" width="1908" height="1596" loading="lazy" decoding="async"
+                alt="Settings page showing two saved words with their switches enabled">
+              <figcaption>Check the saved words and their ON/OFF settings before exporting.</figcaption>
+            </figure>
+          </li>
+          <li>Select <strong>“Export”</strong> under “Backup” and save the backup file (JSON format) on your device.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-08_options-backup_007_EN.png" width="1704" height="1332" loading="lazy" decoding="async"
+                alt="Export button in the Backup section">
+              <figcaption>Select “Export” in the Backup section.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-08_options-backup_008_EN.png" width="1854" height="1446" loading="lazy" decoding="async"
+                alt="macOS file-saving dialog with the Save button">
+              <figcaption>Choose a location for the backup file and select “Save.”</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-08_options-backup_009_EN.png" width="1706" height="1112" loading="lazy" decoding="async"
+                alt="Message confirming that the file has been written">
+              <figcaption>Check that the file has been written successfully.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-08_options-backup_010_EN.png" width="2350" height="1252" loading="lazy" decoding="async"
+                alt="Finder showing the exported JSON backup file">
+              <figcaption>Check that the JSON backup file exists in the selected location.</figcaption>
+            </figure>
+          </li>
         </ol>
+        <p>The file-saving dialog may vary with your operating system and environment.</p>
         <p>The file contains your saved words, including words set to OFF, and the ON/OFF settings for all saved words and for each word.<br>
           It does not include unsaved input, your display language preference, or the 13 standard words and phrases.</p>
         <p class="note">The backup file contains your saved words exactly as stored, in plain text.<br>
@@ -205,28 +392,86 @@
 
       <section aria-labelledby="import">
         <h2 id="import">Import your settings from a backup file</h2>
+        <p class="note"><strong>Importing does not add to your existing saved words.</strong><br>
+          Importing replaces your current saved words and their ON/OFF settings with the contents of the selected backup file. If you wish to keep your current settings, export them first.</p>
         <ol>
           <li>Export your current settings first if you want to keep a copy.</li>
           <li>Clear the input field and save or cancel any active edit.<br>
-            Select <strong>“Import”</strong> under “Backup,” then choose a backup file exported by this extension.</li>
+            Select <strong>“Import”</strong> under “Backup,” then choose a backup file exported by this extension.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-09_options-import-confirmation_006_EN.png" width="1704" height="1330" loading="lazy" decoding="async"
+                alt="Import button in the Backup section">
+              <figcaption>Select “Import” in the Backup section.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-09_options-import-confirmation_007_EN.png" width="2336" height="904" loading="lazy" decoding="async"
+                alt="macOS file picker with the JSON backup file selected">
+              <figcaption>Select the previously exported backup file and click “Open.”</figcaption>
+            </figure>
+          </li>
           <li>Review the entry counts and ON/OFF information shown.<br>
             If correct, select <strong>“Import and Replace”</strong>.<br>
-            Select “Cancel” to stop.</li>
-          <li>Check the save confirmation, then follow the <a href="#apply-settings">steps to check for changes in the comments</a>.</li>
+            Select “Cancel” to stop.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-09_options-import-confirmation_008_EN.png" width="1658" height="1594" loading="lazy" decoding="async"
+                alt="Review Import screen showing word counts, ON/OFF settings, and the replacement button">
+              <figcaption>Review the import details and replacement notice, then select “Import and Replace” if you wish to proceed.</figcaption>
+            </figure>
+          </li>
+          <li>Check the save confirmation, then follow the <a href="#apply-settings">steps to check for changes in the comments</a>.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-09_options-import-confirmation_009_EN.png" width="1606" height="1260" loading="lazy" decoding="async"
+                alt="Message confirming that settings have been imported">
+              <figcaption>Check that the “Settings imported.” message appears.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-09_options-import-confirmation_010_EN.png" width="1684" height="1462" loading="lazy" decoding="async"
+                alt="Saved Words list and ON/OFF settings after importing">
+              <figcaption>Check that the saved words and ON/OFF settings have been replaced with those from the backup file.</figcaption>
+            </figure>
+          </li>
         </ol>
-        <p><strong>Import replaces the whole set.</strong><br>
-          Your saved words and their overall and individual ON/OFF settings are replaced with the contents of the file you chose.<br>
-          It does not change the display language or standard rules.</p>
+        <p>Import is unavailable while entering or editing a word. Import keeps your display language and the standard matching rules.</p>
       </section>
 
       <section aria-labelledby="reset">
         <h2 id="reset">Reset your settings for saved words</h2>
+        <p>Reset is unavailable while entering or editing a word.</p>
         <ol>
           <li>Clear the input field and save or cancel any active edit.<br>
-            Export a backup first if needed.</li>
-          <li>Select <strong>“Reset”</strong> under “Reset Settings” and read the confirmation.</li>
-          <li>Select <strong>“Confirm Reset”</strong> to continue, or “Cancel” to stop.</li>
-          <li>Check the save confirmation, then follow the <a href="#apply-settings">steps to check for changes in the comments</a>.</li>
+            Export a backup first if needed.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-10_options-reset-confirmation_006_EN.png" width="1738" height="1474" loading="lazy" decoding="async"
+                alt="Settings page showing two saved words before resetting">
+              <figcaption>Check your saved words before resetting. Export a backup if needed.</figcaption>
+            </figure>
+          </li>
+          <li>Select <strong>“Reset”</strong> under “Reset Settings” and read the confirmation.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-10_options-reset-confirmation_007_EN.png" width="1640" height="742" loading="lazy" decoding="async"
+                alt="Reset button in the Reset Settings section">
+              <figcaption>Select “Reset” in the Reset Settings section.</figcaption>
+            </figure>
+          </li>
+          <li>Select <strong>“Confirm Reset”</strong> to continue, or “Cancel” to stop.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-10_options-reset-confirmation_008_EN.png" width="1674" height="1226" loading="lazy" decoding="async"
+                alt="Confirmation screen showing the default settings after reset">
+              <figcaption>Review the reset details and select “Confirm Reset” if you wish to proceed.</figcaption>
+            </figure>
+          </li>
+          <li>Check the save confirmation, then follow the <a href="#apply-settings">steps to check for changes in the comments</a>.
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-10_options-reset-confirmation_009_EN.png" width="1602" height="958" loading="lazy" decoding="async"
+                alt="Settings saved message after resetting">
+              <figcaption>Check that the “Settings saved.” message appears.</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="../assets/img/manual/IMG-10_options-reset-confirmation_010_EN.png" width="1770" height="1586" loading="lazy" decoding="async"
+                alt="Empty Saved Words list with the pause enabled after reset">
+              <figcaption>Check that all saved words have been removed and Pause for Saved Words is enabled.</figcaption>
+            </figure>
+          </li>
         </ol>
         <p>Reset deletes all saved words and their individual ON/OFF settings. The defaults are <strong>“Pause for Saved Words” ON and 0 saved words</strong>.<br>
           It does not change the display language preference or the matching rules for the 13 standard words and phrases.</p>
@@ -255,6 +500,13 @@
       <p class="back-to-top"><a href="#main-content">Back to top ↑</a></p>
     </main>
 
+    <dialog class="manual-lightbox" aria-label="Enlarged image" data-enlarge-label="Enlarge image">
+      <div class="manual-lightbox-toolbar">
+        <button type="button" class="manual-lightbox-close" aria-label="Close enlarged image" autofocus>×</button>
+      </div>
+      <p class="manual-lightbox-error" role="status" hidden>The image could not be loaded.</p>
+    </dialog>
+
     <footer class="site-footer">
       <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
       <nav class="page-nav" aria-label="Footer navigation">
@@ -265,7 +517,7 @@
           </ul>
         </nav>
       <nav class="language-nav" aria-label="Footer page language"><a href="../manual.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></nav>
-      <p class="footer-note">Sample documentation for a prototype in development.</p>
+      <p class="footer-note">User documentation for the BETA version in development.</p>
     </footer>
   </body>
 </html>

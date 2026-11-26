@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="「こめんとみまもり Live」設定画面の開き方から、言葉の登録・ワンクッション・バックアップの基本操作までをご案内します。">
+    <meta name="description" content="「こめんとみまもり Live」v0.2.0 BETAの設定画面、言葉の登録、ワンクッション、バックアップの基本操作を画像と動画でご案内します。">
     <title>操作マニュアル | こめんとみまもり Live</title>
     <link rel="stylesheet" href="style.css">
     <link rel="alternate" hreflang="en" href="en/manual.html">
+    <script src="assets/js/manual.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -29,16 +30,16 @@
       <header class="page-intro">
         <p class="eyebrow">利用者様向けガイド</p>
         <h1>操作マニュアル</h1>
-        <p class="lead">「こめんとみまもり Live」設定画面の開き方から、言葉の登録・ワンクッション・バックアップの基本操作までをご案内します。</p>
+        <p class="lead">「こめんとみまもり Live」v0.2.0 BETAの設定画面、言葉の登録、ワンクッション、バックアップの基本操作を画像と動画でご案内します。</p>
         <dl class="page-meta">
-          <div><dt>最終更新日</dt><dd><time datetime="2026-11-23">2026年11月23日</time></dd></div>
-          <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-25">2026年11月25日</time></dd></div>
+          <div><dt>対象バージョン</dt><dd>v0.2.0 BETA</dd></div>
         </dl>
-        <aside class="notice" aria-label="開発中のサンプルページ">
-          <p><strong>開発中のサンプルページ</strong></p>
-          <p>このGoogle Chrome 拡張機能はプロトタイプです。<br>
-            Chrome ウェブストアには未公開です。<br>
-            内容や操作は今後変更する場合があります。</p>
+        <aside class="notice" aria-label="開発中のBETA版について">
+          <p><strong>開発中のBETA版について</strong></p>
+          <p>このGoogle Chrome 拡張機能は開発中のBETA版です。<br>
+            現在、Chrome ウェブストアでの一般公開は行っていません。<br>
+            機能や操作方法は今後変更する場合があります。</p>
         </aside>
       </header>
 
@@ -46,6 +47,7 @@
         <h2 id="toc-title">目次</h2>
         <ol>
             <li><a href="#getting-started">はじめに</a></li>
+            <li><a href="#demo-videos">操作イメージ動画</a></li>
             <li><a href="#popup">「こめんとみまもり Live」の設定画面を開く</a></li>
             <li><a href="#options">設定画面と表示言語</a></li>
             <li><a href="#saved-words">距離を置きたい言葉を管理する</a></li>
@@ -53,6 +55,7 @@
             <li><a href="#video-comments">通常動画コメントのワンクッション</a></li>
             <li><a href="#shorts-comments">YouTube Shorts（YouTube ショート動画）のコメント欄</a></li>
             <li><a href="#studio-comments">Studioの動画コメント</a></li>
+            <li><a href="#reveal-comment">ワンクッション後のコメントを個別に表示する</a></li>
             <li><a href="#apply-settings">登録した言葉の設定をコメント欄に反映する</a></li>
             <li><a href="#export">エクスポートで設定をバックアップする</a></li>
             <li><a href="#import">インポートでバックアップから設定を復元する</a></li>
@@ -63,25 +66,88 @@
 
       <section aria-labelledby="getting-started">
         <h2 id="getting-started">はじめに</h2>
-        <p>このマニュアルは、開発中のプロトタイプ v0.1.0 を対象としたサンプルです。<br>
-          Chrome ウェブストアには未公開です。<br>
-          開発確認用として、すでにGoogle Chrome 拡張機能を読み込んでいる方に向けて説明します。</p>
+        <p>このマニュアルでは、Google Chrome 拡張機能「こめんとみまもり Live」v0.2.0 BETAの操作方法をご案内します。<br>
+          すでに拡張機能を読み込んでいる方を対象としています。</p>
         <p>YouTubeライブ配信のコメント（Live Chat）のうち、通常のメッセージが対象です。<br>
           通常動画、YouTube Shorts（YouTube ショート動画）、YouTube Studioの動画別コメント欄では、拡張機能が対応する画面構成で表示される、返信ではないコメントが対象です。<br>
           いずれの画面でも、標準の13個の言葉と、登録した言葉のうちワンクッションが有効なものを、同じルールで確認します。拡張機能の表示は日本語・英語に対応しています。<br>
           返信やSuper Chatなどは対象外です。対応を確認していない画面構成もあります。<br>
           詳しくは<a href="about.html#scope" target="_blank" rel="noopener noreferrer" aria-label="現在の対象範囲（別タブで開きます）">現在の対象範囲</a>をご覧ください。</p>
+        <div class="manual-image-instructions" hidden>
+          <p>掲載画像をクリックすると拡大できます。赤枠は、主な操作箇所や確認箇所を示しています。</p>
+          <p>キーボードでも操作できます。画像を選択してEnterキーまたはSpaceキーを押すと拡大し、Escキーで閉じることができます。</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="demo-videos">
+        <h2 id="demo-videos">操作イメージ動画</h2>
+        <p>以下の動画では、「こめんとみまもり Live」の設定方法や、コメントのワンクッションの操作例をご覧いただけます。</p>
+        <p>動画を表示する操作を行うと、YouTubeに接続します。動画の埋め込みには、YouTubeのプライバシー強化モードを使用しています。</p>
+        <p>動画は自動再生されません。表示後に、YouTubeプレーヤーの再生ボタンを押してご覧ください。</p>
+        <p>動画内の画面や操作方法は、現在のBETA版と一部異なる場合があります。</p>
+        <p>動画を視聴しなくても、このマニュアルの説明文と画像で操作方法をご確認いただけます。</p>
+        <p>詳しくは、<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+        <article class="manual-video" data-video-id="lO5F2GKgUY8" aria-labelledby="regular-video-demo">
+          <h3 id="regular-video-demo">通常動画のコメント欄</h3>
+          <p>通常動画のコメント欄での、言葉の登録やワンクッションの操作例です。</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="動画を表示する（通常動画のコメント欄）" aria-describedby="regular-video-demo-connection">動画を表示する</button>
+                <p id="regular-video-demo-connection">操作後にYouTubeへ接続します</p>
+              </div>
+              <p class="manual-video-fallback">動画を表示できない場合は、YouTubeで直接ご覧ください。</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/lO5F2GKgUY8" target="_blank" rel="noopener noreferrer" aria-label="YouTubeで動画を見る（通常動画のコメント欄、別タブで開きます）">YouTubeで動画を見る</a>（別タブで開きます）</p>
+        </article>
+
+        <article class="manual-video" data-video-id="ha44KRAgjh4" aria-labelledby="studio-video-demo">
+          <h3 id="studio-video-demo">YouTube Studioの動画コメント欄</h3>
+          <p>YouTube Studioの動画別コメント欄でのワンクッションの操作例です。</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="動画を表示する（YouTube Studioの動画コメント欄）" aria-describedby="studio-video-demo-connection">動画を表示する</button>
+                <p id="studio-video-demo-connection">操作後にYouTubeへ接続します</p>
+              </div>
+              <p class="manual-video-fallback">動画を表示できない場合は、YouTubeで直接ご覧ください。</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/ha44KRAgjh4" target="_blank" rel="noopener noreferrer" aria-label="YouTubeで動画を見る（YouTube Studioの動画コメント欄、別タブで開きます）">YouTubeで動画を見る</a>（別タブで開きます）</p>
+        </article>
+
+        <article class="manual-video" data-video-id="zoMa8pCGfPg" aria-labelledby="shorts-video-demo">
+          <h3 id="shorts-video-demo">YouTube Shortsのコメント欄</h3>
+          <p>YouTube Shortsのコメント欄でのワンクッションの操作例です。</p>
+          <div class="manual-video-stage">
+            <div class="manual-video-placeholder">
+              <div class="manual-video-action" hidden>
+                <button type="button" class="manual-video-button" aria-label="動画を表示する（YouTube Shortsのコメント欄）" aria-describedby="shorts-video-demo-connection">動画を表示する</button>
+                <p id="shorts-video-demo-connection">操作後にYouTubeへ接続します</p>
+              </div>
+              <p class="manual-video-fallback">動画を表示できない場合は、YouTubeで直接ご覧ください。</p>
+            </div>
+          </div>
+          <p class="manual-video-link"><a href="https://youtu.be/zoMa8pCGfPg" target="_blank" rel="noopener noreferrer" aria-label="YouTubeで動画を見る（YouTube Shortsのコメント欄、別タブで開きます）">YouTubeで動画を見る</a>（別タブで開きます）</p>
+        </article>
       </section>
 
       <section aria-labelledby="popup">
         <h2 id="popup">「こめんとみまもり Live」の設定画面を開く</h2>
         <ol>
-          <li>Chromeのツールバーにある「拡張機能」メニューから「こめんとみまもり Live」を選びます（開発版では「こめんとみまもり Live Protect-first PoC」と表示されます）。小さな設定画面（ポップアップ）が開きます。<br>
+          <li>Chromeのツールバーにある「拡張機能」メニューから「こめんとみまもり Live BETA」を選びます。小さな設定画面（ポップアップ）が開きます。<br>
             ツールバーに固定している場合は、そのアイコンからも開けます。</li>
           <li><strong>「詳細設定を開く」</strong>を選ぶと、設定画面（オプション）が新しいタブで開きます。</li>
         </ol>
         <p>ポップアップでは製品名とバージョンを確認できます。<br>
           登録した言葉や表示言語は設定画面で変更します。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-01_popup_001_JP.png" width="1200" height="722" loading="lazy" decoding="async"
+            alt="拡張機能のポップアップと「詳細設定を開く」ボタン">
+          <figcaption>Chromeのツールバーから「こめんとみまもり Live」のアイコンをクリックし、「詳細設定を開く」を選択します。</figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="options">
@@ -93,6 +159,21 @@
           <li><strong>自動（Chromeの表示言語）：</strong>Chromeの表示言語が日本語なら日本語、それ以外なら英語で表示します。</li>
           <li><strong>日本語／English：</strong>設定画面、ポップアップ、YouTubeライブチャット、通常動画、Shorts、Studioの動画別コメント欄で、拡張機能の表示に選んだ言語を使います。</li>
         </ul>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-02_options-language_001_auto.png" width="1816" height="1760" loading="lazy" decoding="async"
+            alt="表示言語が自動に設定されている詳細設定画面">
+          <figcaption>「表示言語」から使用する言語を選択できます。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-02_options-language_002_select.png" width="1830" height="916" loading="lazy" decoding="async"
+            alt="自動・日本語・Englishの3つの選択肢">
+          <figcaption>自動、日本語、Englishから選択します。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-02_options-language_003_JP.png" width="1812" height="1774" loading="lazy" decoding="async"
+            alt="日本語が選択され、表示言語の保存完了が表示された画面">
+          <figcaption>日本語を選択すると、日本語のUIが表示されます。</figcaption>
+        </figure>
         <p>言語設定は自動保存されます。<br>
           入力・編集中の切替には確認があり、保存成功後に未保存の入力内容がクリアされます。<br>
           必要な編集は先に保存してください。</p>
@@ -110,7 +191,18 @@
         <p>各操作の後は設定画面に表示される保存結果を確認し、<a href="#apply-settings">コメント欄で設定の反映を確認する手順</a>に沿って変更が反映されたか確認してください。</p>
         <ol>
           <li><strong>追加：</strong>「言葉を追加」に2〜50文字の言葉を入力し、「追加する」を選びます。<br>
-            最大30件まで登録できます。</li>
+            最大30件まで登録できます。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-03_options-saved-words_001_JP.png" width="1754" height="1104" loading="lazy" decoding="async"
+                alt="全体設定がONの状態で「テストコメント1」を入力した画面">
+              <figcaption>「登録した言葉へのワンクッション」がONであることを確認し、言葉を入力して「追加する」をクリックします。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-03_options-saved-words_002_JP.png" width="1740" height="1304" loading="lazy" decoding="async"
+                alt="登録した言葉に「テストコメント1」が追加された画面">
+              <figcaption>「登録した言葉」に入力した言葉が追加されていることを確認します。</figcaption>
+            </figure>
+          </li>
           <li><strong>編集：</strong>登録した言葉の「編集」を選び、内容を変更して「保存」します。<br>
             取りやめるときは「キャンセル」を選びます。</li>
           <li><strong>削除：</strong>対象の「削除」を選び、確認後に削除します。</li>
@@ -129,6 +221,26 @@
           ワンクッションが不要なコメントは自動で表示し、必要なコメントは内容を隠したまま案内を表示します。<br>
           読みたい場合は、そのコメントの<strong>「内容を見る」</strong>を選んでください。<br>
           英語表示のボタンは「View Comment」です。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-04_live-chat-cushion_001_JP.png" width="1808" height="1448" loading="lazy" decoding="async"
+            alt="「テストコメント1」が登録されている設定画面">
+          <figcaption>あらかじめ距離を置きたい言葉を登録し、ワンクッションをONにしておきます。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-04_live-chat-cushion_002_JP.png" width="2754" height="1574" loading="lazy" decoding="async"
+            alt="通常のコメントと「テストコメント1」が表示されたライブ視聴画面">
+          <figcaption>ライブチャットに投稿されたテストコメントの例です。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-04_live-chat-cushion_003_JP.png" width="2898" height="1560" loading="lazy" decoding="async"
+            alt="Studioライブ配信画面で対象コメントにワンクッションが表示された状態">
+          <figcaption>YouTube Studioのライブ配信画面では、対象コメントにワンクッションが表示されます。読みたい場合は「内容を見る」をクリックします。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-04_live-chat-cushion_004_JP.png" width="2904" height="1558" loading="lazy" decoding="async"
+            alt="Studioライブチャットで「テストコメント1」の本文が表示された状態">
+          <figcaption>「内容を見る」をクリックすると、選択したコメントの本文が表示されます。</figcaption>
+        </figure>
         <p>「内容を見る」で表示するのは、選んだコメントだけです。<br>
           コメントの内容などが変わると、再び隠れる場合があります。</p>
         <p>コメントを自動削除したり、投稿者を評価・制裁したりする機能ではありません。<br>
@@ -144,6 +256,16 @@
           本文を隠した状態で、返信ではない対象コメントを、標準の13個の言葉と登録した言葉のうちワンクッションが有効なものを使って確認します。<br>
           ワンクッションが不要なコメントは自動で表示され、必要なコメントは内容が隠れたまま案内が表示されます。<br>
           <strong>「内容を見る」</strong>を選ぶと、その1件だけを表示できます。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-05_video-comments-cushion_001_JP.png" width="2266" height="1600" loading="lazy" decoding="async"
+            alt="通常動画のコメント欄に表示されたワンクッションと「内容を見る」ボタン">
+          <figcaption>対象コメントにはワンクッションが表示されます。読みたい場合は「内容を見る」をクリックします。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-05_video-comments-cushion_002_JP.png" width="1626" height="884" loading="lazy" decoding="async"
+            alt="通常動画のコメント欄に表示された「テストコメント1」">
+          <figcaption>選択したコメントの本文が表示されます。</figcaption>
+        </figure>
         <p>対応する画面で、ページを再読み込みせずに別の動画へ切り替えた場合は、前の動画で「内容を見る」を押して表示した状態を解除し、新しい動画のコメントの確認を再開しようとします。<br>
           コメントの確認が再開されない場合や再読み込みの案内が出た場合は、ページを再読み込みしてください。<br>
           返信は対象外です。対応を確認していない画面構成もあります。</p>
@@ -161,6 +283,16 @@
         </ol>
         <p>設定の変更が反映されない場合や、再読み込みの案内が表示された場合は、YouTube Shortsのページを再読み込みしてください。</p>
         <p>返信コメントは、現在のワンクッション機能の対象外です。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-06_shorts-comments-cushion_001_JP.png" width="2578" height="1548" loading="lazy" decoding="async"
+            alt="Shortsのコメント欄に表示されたワンクッションと「内容を見る」ボタン">
+          <figcaption>Shortsのコメント欄でも、対象コメントにはワンクッションが表示されます。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-06_shorts-comments-cushion_002_JP.png" width="2586" height="1546" loading="lazy" decoding="async"
+            alt="Shortsのコメント欄に表示された「テストコメント1」">
+          <figcaption>「内容を見る」をクリックすると、選択したコメントの本文が表示されます。</figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="studio-comments">
@@ -169,33 +301,87 @@
           本文を隠した状態で、返信ではない対象コメントを、標準の13個の言葉と登録した言葉のうちワンクッションが有効なものを使って確認します。<br>
           ワンクッションが不要なコメントは自動で表示され、必要なコメントは内容が隠れたまま案内が表示されます。<br>
           <strong>「内容を見る」</strong>を選ぶと、その1件だけを表示できます。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-07_studio-comments-cushion_001_JP.png" width="2334" height="1564" loading="lazy" decoding="async"
+            alt="Studioの「動画のコメント」画面に表示されたワンクッション">
+          <figcaption>YouTube Studioの対象動画から「コメント」を開くと、対象コメントにワンクッションが表示されます。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-07_studio-comments-cushion_002_JP.png" width="2080" height="1592" loading="lazy" decoding="async"
+            alt="Studioの動画コメント欄に表示された「テストコメント1」">
+          <figcaption>「内容を見る」をクリックすると、選択したコメントの本文が表示されます。</figcaption>
+        </figure>
         <p>画面内で別の動画に切り替えたときなどは、対象の本文を隠したまま再読み込みを案内する場合があります。<br>
           案内が出たらページを再読み込みし、現在の動画のコメント欄を確認してください。<br>
           チャンネル全体のコメント管理画面、Shorts専用コメント管理画面、返信は対象外です。</p>
       </section>
 
+      <section aria-labelledby="reveal-comment">
+        <h2 id="reveal-comment">ワンクッション後のコメントを個別に表示する</h2>
+        <p>ワンクッションが表示されたコメントは、無理に読む必要はありません。内容を確認したいと思ったときに、ご自身の判断で「内容を見る」を選択してください。</p>
+        <p>選択したコメントだけを表示する機能です。コメント内容や画面の状態が変わったときなどには、一度表示したコメントが再び隠れる場合があります。</p>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-11_video-comments-reveal_001_JP.png" width="1656" height="1592" loading="lazy" decoding="async"
+            alt="2件のワンクッションのうち、下側の「内容を見る」ボタンを示した画面">
+          <figcaption>複数のコメントにワンクッションが表示されている場合、読みたいコメントの「内容を見る」をクリックします。</figcaption>
+        </figure>
+        <figure class="manual-figure">
+          <img src="assets/img/manual/IMG-11_video-comments-reveal_002_JP.png" width="1658" height="1518" loading="lazy" decoding="async"
+            alt="下側のコメントだけが表示され、上側のワンクッションが維持された画面">
+          <figcaption>この例では、選択したコメントのみ本文が表示され、ほかの対象コメントにはワンクッションが維持されています。</figcaption>
+        </figure>
+      </section>
+
       <section aria-labelledby="apply-settings">
         <h2 id="apply-settings">登録した言葉の設定をコメント欄に反映する</h2>
-        <p>登録した言葉の追加・編集・削除、全体や言葉ごとのON/OFF、インポート、リセットを保存すると、開いているYouTubeライブチャット、通常動画、Shorts、Studioの対象コメント欄への反映を試みます。</p>
+        <p>設定を保存すると、開いているYouTubeライブチャット、通常動画、YouTube Shorts（YouTubeショート動画）、YouTube Studioの対象コメント欄への反映を試みます。</p>
         <ol class="steps">
-          <li><strong>設定画面で登録した言葉の設定を変更します。</strong></li>
+          <li><strong>設定画面で登録した言葉の設定を変更します。</strong><br>
+            言葉の追加・編集・削除、全体や言葉ごとのON/OFF、インポート、リセットが対象です。</li>
           <li><strong>設定画面で保存完了を確認します。</strong><br>
             保存結果が不明な場合は、<a href="#troubleshooting">制限・うまく動かない場合</a>をご覧ください。</li>
           <li><strong>対象のコメント欄で変更が反映されたか確認します。</strong><br>
-            反映されない場合は、該当するLive ChatやShortsのコメント欄を閉じて開き直すか、該当ページを再読み込みしてください。<br>
-            ページを閉じて開き直しても確認できます。</li>
+            変更が反映されない場合は、該当する画面を閉じて開き直すか、ページを再読み込みしてください。</li>
         </ol>
         <p class="note">設定画面の保存完了表示は、設定が保存されたことを示します。<br>
-          すべての画面に変更が反映される保証はなく、反映までにかかる時間も確約できません。</p>
+          ただし、すべての対象画面に変更が反映されることは保証されません。反映までにかかる時間も確約できません。</p>
       </section>
 
       <section aria-labelledby="export">
         <h2 id="export">エクスポートで設定をバックアップする</h2>
         <ol>
           <li>入力欄を空にし、編集中の言葉があれば保存またはキャンセルします。<br>
-            入力・編集中はエクスポートできません。</li>
-          <li>「バックアップ」の<strong>「エクスポート」</strong>を選び、バックアップファイル（JSON形式）を端末に保存します。</li>
+            入力・編集中はエクスポートできません。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-08_options-backup_001_JP.png" width="1622" height="1292" loading="lazy" decoding="async"
+                alt="2件の登録語句とON設定が表示された画面">
+              <figcaption>バックアップしたい言葉とON/OFF設定を確認します。</figcaption>
+            </figure>
+          </li>
+          <li>「バックアップ」の<strong>「エクスポート」</strong>を選び、バックアップファイル（JSON形式）を端末に保存します。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-08_options-backup_002_JP.png" width="1808" height="1278" loading="lazy" decoding="async"
+                alt="バックアップ欄のエクスポートボタン">
+              <figcaption>「バックアップ」から「エクスポート」をクリックします。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-08_options-backup_003_JP.png" width="1966" height="1382" loading="lazy" decoding="async"
+                alt="macOSのファイル保存ダイアログと保存ボタン">
+              <figcaption>ファイルの保存先を選択し、「保存」をクリックします。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-08_options-backup_004_JP.png" width="1792" height="1162" loading="lazy" decoding="async"
+                alt="ファイルへの書き込み完了メッセージ">
+              <figcaption>ファイルへの書き込みが完了したことを確認します。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-08_options-backup_005_JP.png" width="2326" height="1238" loading="lazy" decoding="async"
+                alt="Finderに保存されたバックアップ用JSONファイル">
+              <figcaption>保存先にJSON形式のバックアップファイルが作成されていることを確認します。</figcaption>
+            </figure>
+          </li>
         </ol>
+        <p>ファイルの保存画面はOSや利用環境によって異なります。</p>
         <p>ファイルには、登録した言葉と、全体および言葉ごとのON/OFF設定が含まれます。<br>
           OFFにした言葉も含まれます。<br>
           未保存の入力内容、表示言語設定、標準の13個の言葉は含みません。</p>
@@ -205,28 +391,86 @@
 
       <section aria-labelledby="import">
         <h2 id="import">インポートでバックアップから設定を復元する</h2>
+        <p class="note"><strong>インポートは既存の登録内容への追加ではありません。</strong><br>
+          現在登録されている言葉とON/OFF設定は、選択したバックアップファイルの内容に置き換わります。現在の登録内容を残しておきたい場合は、事前にエクスポートしてください。</p>
         <ol>
           <li>現在の登録内容も残したい場合は、先にエクスポートします。</li>
           <li>入力欄を空にし、編集中の言葉を保存またはキャンセルします。<br>
-            「バックアップ」の<strong>「インポート」</strong>から、この拡張機能でエクスポートしたバックアップファイルを選びます。</li>
+            「バックアップ」の<strong>「インポート」</strong>から、この拡張機能でエクスポートしたバックアップファイルを選びます。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-09_options-import-confirmation_001_JP.png" width="1790" height="1332" loading="lazy" decoding="async"
+                alt="バックアップ欄のインポートボタン">
+              <figcaption>「バックアップ」から「インポート」をクリックします。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-09_options-import-confirmation_002_JP.png" width="2356" height="914" loading="lazy" decoding="async"
+                alt="macOSのファイル選択画面でJSONファイルを選択した状態">
+              <figcaption>以前保存したバックアップファイルを選択し、「開く」をクリックします。</figcaption>
+            </figure>
+          </li>
           <li>件数やON/OFFなどの確認表示を読み、問題がなければ<strong>「取り込んで置き換える」</strong>を選びます。<br>
-            取りやめる場合は「キャンセル」を選びます。</li>
-          <li>保存完了を確認し、<a href="#apply-settings">コメント欄で設定の反映を確認する手順</a>に沿って変更が反映されたか確認します。</li>
+            取りやめる場合は「キャンセル」を選びます。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-09_options-import-confirmation_003_JP.png" width="1634" height="1536" loading="lazy" decoding="async"
+                alt="登録語句数とON/OFF設定が表示されたインポート確認画面">
+              <figcaption>インポート内容と置き換えに関する注意事項を確認し、問題なければ「取り込んで置き換える」をクリックします。</figcaption>
+            </figure>
+          </li>
+          <li>保存完了を確認し、<a href="#apply-settings">コメント欄で設定の反映を確認する手順</a>に沿って変更が反映されたか確認します。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-09_options-import-confirmation_004_JP.png" width="1590" height="1152" loading="lazy" decoding="async"
+                alt="インポート完了メッセージ">
+              <figcaption>「設定をインポートしました。」と表示されることを確認します。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-09_options-import-confirmation_005_JP.png" width="1622" height="1292" loading="lazy" decoding="async"
+                alt="インポート後の2件の登録語句とON/OFF設定">
+              <figcaption>登録した言葉とON/OFF設定が、バックアップの内容に置き換わったことを確認します。</figcaption>
+            </figure>
+          </li>
         </ol>
-        <p><strong>インポートすると、現在の登録内容をすべて置き換えます。</strong><br>
-          登録した言葉と、全体および言葉ごとのON/OFF設定が、選んだファイルの内容になります。<br>
-          表示言語設定と標準ルールは変更しません。</p>
+        <p>入力・編集中はインポートできません。表示言語設定と標準の判定ルールは変更されません。</p>
       </section>
 
       <section aria-labelledby="reset">
         <h2 id="reset">リセットで登録した言葉の設定を初期状態に戻す</h2>
+        <p>入力・編集中はリセットできません。</p>
         <ol>
           <li>入力欄を空にし、編集中の言葉を保存またはキャンセルします。<br>
-            必要な場合は事前にエクスポートでバックアップします。</li>
-          <li>「設定のリセット」の<strong>「リセットする」</strong>を選び、確認表示を読みます。</li>
+            必要な場合は事前にエクスポートでバックアップします。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-10_options-reset-confirmation_001_JP.png" width="1580" height="1548" loading="lazy" decoding="async"
+                alt="リセット前の2件の登録語句とON/OFF設定">
+              <figcaption>リセット前の登録内容を確認します。必要に応じてバックアップを作成してください。</figcaption>
+            </figure>
+          </li>
+          <li>「設定のリセット」の<strong>「リセットする」</strong>を選び、確認表示を読みます。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-10_options-reset-confirmation_002_JP.png" width="1750" height="924" loading="lazy" decoding="async"
+                alt="設定のリセット欄にあるリセットボタン">
+              <figcaption>「設定のリセット」から「リセットする」をクリックします。</figcaption>
+            </figure>
+          </li>
           <li>よければ<strong>「リセットを実行する」</strong>を選びます。<br>
-            取りやめる場合は「キャンセル」を選びます。</li>
-          <li>保存完了を確認し、<a href="#apply-settings">コメント欄で設定の反映を確認する手順</a>に沿って変更が反映されたか確認します。</li>
+            取りやめる場合は「キャンセル」を選びます。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-10_options-reset-confirmation_003_JP.png" width="1696" height="1294" loading="lazy" decoding="async"
+                alt="登録語句が0件、全体設定がONになることを示すリセット確認画面">
+              <figcaption>リセット後の状態と注意事項を確認し、問題なければ「リセットを実行する」をクリックします。</figcaption>
+            </figure>
+          </li>
+          <li>保存完了を確認し、<a href="#apply-settings">コメント欄で設定の反映を確認する手順</a>に沿って変更が反映されたか確認します。
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-10_options-reset-confirmation_004_JP.png" width="1636" height="972" loading="lazy" decoding="async"
+                alt="リセット実行後の設定保存完了メッセージ">
+              <figcaption>「設定を保存しました。」と表示されることを確認します。</figcaption>
+            </figure>
+            <figure class="manual-figure">
+              <img src="assets/img/manual/IMG-10_options-reset-confirmation_005_JP.png" width="1706" height="1482" loading="lazy" decoding="async"
+                alt="登録語句が0件となり、全体設定がONに戻った画面">
+              <figcaption>登録した言葉がなくなり、全体設定がONに戻っていることを確認します。</figcaption>
+            </figure>
+          </li>
         </ol>
         <p>登録した言葉とその個別設定をすべて削除し、<strong>「登録した言葉へのワンクッション」はON、登録した言葉は0件</strong>の初期状態に戻します。<br>
           表示言語設定と、標準の13個の言葉を使う判定ルールは変更しません。</p>
@@ -255,6 +499,13 @@
       <p class="back-to-top"><a href="#main-content">ページ上部へ戻る ↑</a></p>
     </main>
 
+    <dialog class="manual-lightbox" aria-label="画像の拡大表示" data-enlarge-label="画像を拡大表示">
+      <div class="manual-lightbox-toolbar">
+        <button type="button" class="manual-lightbox-close" aria-label="拡大画像を閉じる" autofocus>×</button>
+      </div>
+      <p class="manual-lightbox-error" role="status" hidden>画像を読み込めませんでした。</p>
+    </dialog>
+
     <footer class="site-footer">
       <p class="footer-brand" lang="ja">こめんとみまもり Live</p>
       <nav class="page-nav" aria-label="フッターナビゲーション">
@@ -265,7 +516,7 @@
           </ul>
         </nav>
       <nav class="language-nav" aria-label="フッターの表示言語"><span lang="ja" aria-current="true">日本語</span><span aria-hidden="true">/</span><a href="en/manual.html" lang="en" hreflang="en">English</a></nav>
-      <p class="footer-note">開発中のプロトタイプに関するサンプル資料です。</p>
+      <p class="footer-note">開発中のBETA版に関する利用者様向け資料です。</p>
     </footer>
   </body>
 </html>

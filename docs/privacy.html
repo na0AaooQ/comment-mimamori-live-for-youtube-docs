@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="「こめんとみまもり Live」の現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。">
+    <meta name="description" content="「こめんとみまもり Live」v0.2.0 BETAと公開資料Webサイトでの情報の取り扱いをご説明します。">
     <title>プライバシーポリシー | こめんとみまもり Live</title>
     <link rel="stylesheet" href="style.css">
     <link rel="alternate" hreflang="en" href="en/privacy.html">
@@ -29,16 +29,16 @@
       <header class="page-intro">
         <p class="eyebrow">利用者様向けガイド</p>
         <h1>プライバシーポリシー</h1>
-        <p class="lead">「こめんとみまもり Live」の現在のプロトタイプで、コメント本文・判定結果と設定情報をどのように扱うかをご説明します。</p>
+        <p class="lead">「こめんとみまもり Live」v0.2.0 BETAと公開資料Webサイトでの情報の取り扱いをご説明します。</p>
         <dl class="page-meta">
-          <div><dt>最終更新日</dt><dd><time datetime="2026-11-23">2026年11月23日</time></dd></div>
-          <div><dt>対象バージョン</dt><dd>v0.1.0</dd></div>
+          <div><dt>最終更新日</dt><dd><time datetime="2026-11-25">2026年11月25日</time></dd></div>
+          <div><dt>対象バージョン</dt><dd>v0.2.0 BETA</dd></div>
         </dl>
-        <aside class="notice" aria-label="開発中のサンプルページ">
-          <p><strong>開発中のサンプルページ</strong></p>
-          <p>この拡張機能はプロトタイプです。<br>
-            Chrome ウェブストアには未公開です。<br>
-            内容や操作は今後変更する場合があります。</p>
+        <aside class="notice" aria-label="開発中のBETA版について">
+          <p><strong>開発中のBETA版について</strong></p>
+          <p>このGoogle Chrome 拡張機能は開発中のBETA版です。<br>
+            現在、Chrome ウェブストアでの一般公開は行っていません。<br>
+            機能や操作方法は今後変更する場合があります。</p>
         </aside>
       </header>
 
@@ -58,9 +58,9 @@
 
       <section aria-labelledby="policy">
         <h2 id="policy">基本方針</h2>
-        <p>「こめんとみまもり Live」利用者様のプライバシーを尊重し、コメント本文と判定結果をブラウザ内で取り扱う設計です。<br>
-          このページは、v0.1.0の現行実装に基づく、開発中のプロトタイプ用の暫定的なプライバシー説明です。</p>
-        <p>拡張機能によるコメント処理、設定の保存、利用者様が保存するバックアップ、Webサイトのホスティングを区別して説明します。</p>
+        <p>このプライバシーポリシーは、「こめんとみまもり Live」v0.2.0 BETAの現行実装および公開資料Webサイトにおける情報の取り扱いについて説明するものです。</p>
+        <p>「こめんとみまもり Live」は利用者様のプライバシーを尊重し、コメント本文と判定結果をブラウザ内で取り扱う設計です。</p>
+        <p>拡張機能によるコメント処理、設定の保存、利用者様が保存するバックアップ、Webサイトのホスティングと埋め込み動画について説明します。</p>
       </section>
 
       <section aria-labelledby="comments">
@@ -121,16 +121,18 @@
           Webページの閲覧に伴うホスティング側の処理は、拡張機能のコメント判定とは別のものです。</p>
         <p>GitHub Pages上でページを閲覧すると、GitHubへのサインインの有無にかかわらず、セキュリティ目的で閲覧者のIPアドレスが記録・保存されます。<br>
           詳しくは<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub公式のデータ収集に関する説明</a>と<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシー声明</a>をご確認ください。</p>
-        <p>このWebページ自体には、外部アクセス解析、テレメトリ、外部CDN、外部JavaScriptを追加していません。<br>
+        <p>このWebサイトでは、独自の外部アクセス解析やテレメトリを使用していません。Webサイト自身のCSS・JavaScript・操作説明用画像は、同じWebサイトから配信しています。<br>
           外部サイトのリンクを開いた場合は、移動先のサイトでの取り扱いが適用されます。</p>
+        <h3>YouTubeの埋め込み動画について</h3>
+        <p>このWebサイトの操作マニュアルには、YouTubeのプライバシー強化モードを使用した操作イメージ動画を掲載しています。</p>
+        <p>動画の表示を選択すると、利用者様のブラウザがYouTubeおよび関連サービスに接続します。動画の表示や視聴に伴う情報の取り扱いについては、<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>をご確認ください。</p>
+        <p>動画を表示・視聴しなくても、操作マニュアルをご利用いただけます。</p>
       </section>
 
       <section aria-labelledby="updates">
         <h2 id="updates">今後の更新</h2>
-        <p>現在は開発中のプロトタイプです。<br>
-          機能の変更に応じて、この説明も更新する可能性があります。</p>
-        <p>正式公開前・Chrome ウェブストア申請前に、実装内容、保存する情報、外部通信の有無、利用者様向け説明を改めて確認する予定です。<br>
-          この暫定ページが、正式なプライバシーポリシーとしての法的な完全性を保証するものではありません。</p>
+        <p>現在は開発中のBETA版です。</p>
+        <p>拡張機能やWebサイトの機能、情報の取り扱いに変更が生じた場合は、その内容に応じてこのプライバシーポリシーを見直し、更新します。</p>
       </section>
 
       <section aria-labelledby="contact">
@@ -166,7 +168,7 @@
           </ul>
         </nav>
       <nav class="language-nav" aria-label="フッターの表示言語"><span lang="ja" aria-current="true">日本語</span><span aria-hidden="true">/</span><a href="en/privacy.html" lang="en" hreflang="en">English</a></nav>
-      <p class="footer-note">開発中のプロトタイプに関するサンプル資料です。</p>
+      <p class="footer-note">開発中のBETA版に関する利用者様向け資料です。</p>
     </footer>
   </body>
 </html>
